@@ -1,0 +1,23 @@
+body{
+    background-color: #f6f1eb;
+}
+
+header{
+    width: 90%;
+    margin:auto;
+    height: 75px;
+    display:flex;
+}
+.headerLeft{
+    flex:none;
+    background-color: red;
+}
+.headerCenter{
+    flex:auto;
+    background-color: blue;
+    
+}
+.headerRight{
+    flex:none;
+    background-color: red;
+}
