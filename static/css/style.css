@@ -1,23 +1,39 @@
 body{
     background-color: #f6f1eb;
+    color: rgb(68, 68, 68);
+    font-weight: 200;
 }
 
 header{
-    width: 90%;
+    /* background-color: grey; */
+    width: 85%;
     margin:auto;
     height: 75px;
     display:flex;
+    align-items:center;
 }
 .headerLeft{
     flex:none;
-    background-color: red;
+    /* background-color: red; */
 }
 .headerCenter{
     flex:auto;
-    background-color: blue;
+    /* background-color: blue; */
     
 }
 .headerRight{
     flex:none;
-    background-color: red;
+    /* background-color: red; */
+}
+.headerCell{
+    display:flex;
+    justify-content: center;
+}
+
+.headerCell div{
+    padding:5px;
+}
+
+.logo{
+    height: 51px;
 }
