@@ -2,6 +2,7 @@ body{
     background-color: #f6f1eb;
     color: rgb(68, 68, 68);
     font-weight: 200;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -28,6 +29,7 @@ header{
 .headerCell{
     display:flex;
     justify-content: center;
+    align-items: center;
     padding:5px;
 }
 
@@ -37,4 +39,29 @@ header{
 
 .logo{
     height: 51px;
+}
+
+.menu{
+    height: 24px;
+}
+
+.nav-links{
+    /* display:flex; */
+    justify-content: space-around;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:768px){
+    .menu-str{
+        display:none;
+    }
 }
