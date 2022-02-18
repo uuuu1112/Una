@@ -28,10 +28,11 @@ header{
 .headerCell{
     display:flex;
     justify-content: center;
+    padding:5px;
 }
 
 .headerCell div{
-    padding:5px;
+    padding:10px;
 }
 
 .logo{
