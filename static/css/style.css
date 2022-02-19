@@ -24,6 +24,7 @@ header{
 }
 .headerRight{
     flex:none;
+    display: flex;
     /* background-color: red; */
 }
 .headerCell{
@@ -31,6 +32,7 @@ header{
     justify-content: center;
     align-items: center;
     padding:5px;
+    cursor:pointer;
 }
 
 .headerCell div{
@@ -46,17 +48,55 @@ header{
 }
 
 .nav-links{
-    /* display:flex; */
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    width: 310px;
+    /* position:absolute; */
+    height: 100vh;
+    top: 15vh;
+    margin: auto;
+    /* background-color: blue; */
 }
 
 .nav-links li{
     list-style: none;
+    padding: 10px;
+    /* background-color: red; */
 }
 
 .nav-links a{
     color: rgb(68, 68, 68);
     text-decoration: none;
+    font-size: 24px;
+    
+}
+
+.sidebarMenu{
+    /* display: none; */
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 510px;
+    background-color: #fff;
+    z-index: 1;
+    transform: translate(-100%);
+    transition: transform 0.5s ease-in;
+}
+
+.sidebarMenu-active{
+    transform: translateX(0%);
+}
+.sidebarLogo{
+    position: relative;
+    left: 0px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.sidebarLogo img{
+    width: 23px;
+    height: 24px;
 }
 
 
@@ -64,4 +104,5 @@ header{
     .menu-str{
         display:none;
     }
+
 }
