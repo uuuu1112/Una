@@ -1,0 +1,112 @@
+body{
+    background-color: #f6f1eb;
+    color: rgb(68, 68, 68);
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    /* background-color: grey; */
+    width: 85%;
+    margin:auto;
+    height: 75px;
+    display:flex;
+    align-items:center;
+}
+.headerLeft{
+    flex:none;
+    /* background-color: red; */
+}
+.headerCenter{
+    flex:auto;
+    /* background-color: blue; */
+    
+}
+.headerRight{
+    flex:none;
+    display: flex;
+    /* background-color: red; */
+}
+.headerCell{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    cursor:pointer;
+}
+.clear{
+    cursor: pointer;
+}
+.headerCell div{
+    padding:10px;
+}
+
+.logo{
+    height: 51px;
+}
+
+.menu{
+    height: 24px;
+}
+
+.nav-links{
+    /* justify-content: space-around; */
+    width: 310px;
+    /* position:absolute; */
+    height: 100vh;
+    top: 15vh;
+    margin: auto;
+    /* background-color: blue; */
+}
+
+.nav-links li{
+    list-style: none;
+    padding: 10px;
+    /* background-color: red; */
+}
+
+.nav-links a{
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    font-size: 24px;
+    /* background-color: gray; */
+    margin-left: 20px;
+}
+
+.sidebarMenu{
+    /* display: none; */
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 510px;
+    background-color: #fff;
+    z-index: 1;
+    transform: translate(-100%);
+    transition: transform 0.5s ease-in;
+}
+
+.sidebarMenu-active{
+    transform: translateX(0%);
+}
+.sidebarLogo{
+    position: relative;
+    left: 0px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* background-color: greenyellow; */
+}
+.sidebarLogo img{
+    width: 23px;
+    height: 24px;
+}
+
+
+@media screen and (max-width:768px){
+    .menu-str{
+        display:none;
+    }
+
+}
