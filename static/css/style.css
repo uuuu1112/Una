@@ -34,7 +34,9 @@ header{
     padding:5px;
     cursor:pointer;
 }
-
+.clear{
+    cursor: pointer;
+}
 .headerCell div{
     padding:10px;
 }
@@ -67,7 +69,8 @@ header{
     color: rgb(68, 68, 68);
     text-decoration: none;
     font-size: 24px;
-    
+    /* background-color: gray; */
+    margin-left: 20px;
 }
 
 .sidebarMenu{
@@ -93,6 +96,7 @@ header{
     display: flex;
     align-items: center;
     padding: 10px;
+    /* background-color: greenyellow; */
 }
 .sidebarLogo img{
     width: 23px;
