@@ -1,7 +1,7 @@
 section{
     width: 70%;
     margin: auto;
-    background-color: #fffcf7;
+    /* background-color: #fffcf7; */
     align-items: center;
 
 }
@@ -14,9 +14,13 @@ section div {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.news-p{
+    width: 75%;
+    padding: 0;
+}
 .news{
     width: 100%;
 }
-section div h2{
+/* section div h2{
     margin-top: 50px;
-}
+} */
