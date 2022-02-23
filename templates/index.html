@@ -16,27 +16,58 @@
         <h2></h2>
     </div>
 </section>
-<div id="app">
-    Some value: {{ someValue }} <br />
-    Some computed value: {{ someComputed }}
-  </div>
+
+    <style>
+        .box{
+            background-color: purple;
+            height: 200px;
+            width: 200px;
+        }
+        [v-cloak]{
+            display: none;
+        }
+
+        input{
+            margin:10px;
+            display: block;
+        }
+    </style>
+
+  <div id="app" v-cloak>
+    {{ greeting }}
+    <input @keyup.enter="greet(greeting+'!!!!')" v-model="greeting">
+    <hr/>
+    <button @click="toggleBox">Show Box</button>
+    <div v-if="isVisible" class="box"></div>
+
+
+
+</div>
 {% endblock%}
 
 {% block js %}
+
 <script>
-    new Vue({
-    el: "#app",
-    data() {
-      return {
-        someValue: 10
-      }
-    },
-    computed: {
-      someComputed() {
-        return this.someValue * 10;
-      }
-    }
-  });
+    Vue.createApp({
+        data() {
+            return {
+                greeting: 'Hello Vue!',
+                isVisible:false
+            }
+        },
+        methods:{
+            toggleBox(){
+                this.isVisible=!this.isVisible
+            },
+            greet(greeting){
+                console.log(greeting)
+            }
+        }
+
+    }).mount('#app')
+    
+
+
 </script>
 
 {% endblock%}
