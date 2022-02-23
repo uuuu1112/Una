@@ -16,8 +16,27 @@
         <h2></h2>
     </div>
 </section>
+<div id="app">
+    Some value: {{ someValue }} <br />
+    Some computed value: {{ someComputed }}
+  </div>
 {% endblock%}
 
 {% block js %}
-    
+<script>
+    new Vue({
+    el: "#app",
+    data() {
+      return {
+        someValue: 10
+      }
+    },
+    computed: {
+      someComputed() {
+        return this.someValue * 10;
+      }
+    }
+  });
+</script>
+
 {% endblock%}
