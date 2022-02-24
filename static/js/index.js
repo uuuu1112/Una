@@ -61,6 +61,7 @@ app.component('login-form',{
         }
     }
 })
+
 app.component('custom-input',{
     template:`
         <label>
