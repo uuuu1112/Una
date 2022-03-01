@@ -1,3 +1,5 @@
+/* global */
+
 section{
     /* width: 70%; */
     margin: auto;
@@ -19,6 +21,9 @@ section div {
     /* padding-top: 60px; */
     padding-bottom: 10px;
 }
+
+/* news */
+
 .news{
     width: 70%;
 }
@@ -31,16 +36,17 @@ section div {
 .news-img{
     width: 100%;
 }
-/* section div h2{
-    margin-top: 50px;
-} */
+
+
+/* product-list */
+
 .product-block{
     width:73.68%;
 }
 
 .product-list{
     display: flex;
-    /* background-color: pink; */
+    background-color: pink;
 }
 
 .product{
@@ -52,6 +58,16 @@ section div {
 .product-img{
     width: 100%;
 }
+
+
+/* classic */
+.list-bloxk{
+    width:50%;
+    background-color: yellowgreen;
+}
+
+
+
 
 @media(max-width:1250px){
     .news{
@@ -76,6 +92,8 @@ section div {
         width: 100%;
     }
 }
+
+
 
 
 
