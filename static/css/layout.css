@@ -12,7 +12,9 @@ header{
     height: 75px;
     display:flex;
     align-items:center;
+    
 }
+
 .headerLeft{
     flex:none;
     /* background-color: red; */
