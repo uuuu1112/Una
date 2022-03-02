@@ -1,4 +1,48 @@
-body{
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:#f6f1eb ;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: pink;
+    /* min-height: 8vh; */
+}
+
+.logo{
+    height: 51px;
+}
+.menu{
+    height: 24px;
+}
+
+.nav-links{
+    display: flex;
+
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+
+/* body{
     background-color: #f6f1eb;
     color: rgb(68, 68, 68);
     font-weight: 200;
@@ -6,7 +50,6 @@ body{
 }
 
 header{
-    /* background-color: grey; */
     width: 85%;
     margin:auto;
     height: 75px;
@@ -17,17 +60,15 @@ header{
 
 .headerLeft{
     flex:none;
-    /* background-color: red; */
 }
 .headerCenter{
     flex:auto;
-    /* background-color: blue; */
+
     
 }
 .headerRight{
     flex:none;
     display: flex;
-    /* background-color: red; */
 }
 .headerCell{
     display:flex;
@@ -52,31 +93,27 @@ header{
 }
 
 .nav-links{
-    /* justify-content: space-around; */
+
     width: 310px;
-    /* position:absolute; */
     height: 100vh;
     top: 15vh;
     margin: auto;
-    /* background-color: blue; */
+    
 }
 
 .nav-links li{
     list-style: none;
     padding: 10px;
-    /* background-color: red; */
 }
 
 .nav-links a{
     color: rgb(68, 68, 68);
     text-decoration: none;
     font-size: 24px;
-    /* background-color: gray; */
     margin-left: 20px;
 }
 
 .sidebarMenu{
-    /* display: none; */
     position:absolute;
     top: 0px;
     left: 0px;
@@ -98,17 +135,16 @@ header{
     display: flex;
     align-items: center;
     padding: 10px;
-    /* background-color: greenyellow; */
 }
 .sidebarLogo img{
     width: 23px;
     height: 24px;
-}
+} 
 
 
 @media screen and (max-width:768px){
     .menu-str{
         display:none;
     }
-
-}
+} 
+*/
