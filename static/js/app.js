@@ -1,13 +1,13 @@
 const navSlide=()=>{
-    const burger = document.querySelector('.burger')
-    const sidebarMenu=document.querySelector('.sidebarMenu')
+    const menu = document.querySelector('.menu')
+    const sidebar=document.querySelector('.sidebar')
     const clear=document.querySelector('.clear')
 
-    burger.addEventListener('click',()=>{
-        sidebarMenu.classList.toggle('sidebarMenu-active')
+    menu.addEventListener('click',()=>{
+        sidebar.classList.toggle('sidebar-active')
     });
     clear.addEventListener('click',()=>{
-        sidebarMenu.classList.toggle('sidebarMenu-active')
+        sidebar.classList.toggle('sidebar-active')
     });
 }
 
