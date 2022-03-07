@@ -8,6 +8,15 @@
 body{
     background-color:#f6f1eb ;
 }
+
+nav{
+    position: fixed;
+}
+
+main{
+    position: relative;
+}
+
 nav,.navbar,.bar-links,.bar-logo,.clear{
     justify-content: center;
     align-items: center;
