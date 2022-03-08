@@ -7,6 +7,7 @@
 }
 body{
     background-color:#f6f1eb ;
+    text-align: center;
 }
 
 nav{
@@ -14,21 +15,30 @@ nav{
 }
 
 main{
-    position: relative;
+    padding-top: 75px;
 }
 
-nav,.navbar,.bar-links,.bar-logo,.clear{
+.navbar,.bar-links,.bar-logo,.clear{
     justify-content: center;
     align-items: center;
     display: flex;
 }
+.navbar{
+    margin: 0 auto;
+    margin-top: 10px;
+}
 .sidebar{
     justify-content: center;
     display: flex;
+    z-index: 2;
 }
 
 nav{
+    background-color:#f6f1eb ;
+    width: 100%;
     height: 75px;
+    z-index: 1;
+    text-align: center;
 }
 .navbar{
     width: 85%;
@@ -65,7 +75,7 @@ nav{
 }
 .clear{
     padding: 20 0px;
-    margin-top: 20px;
+    margin-top: 85px;
     display: flex;
 }
 .clear-img{
@@ -77,6 +87,7 @@ nav{
 
 .nav-links{
     justify-content: space-around;
+    margin-top: 30%;
 }
 .nav-links li{
     list-style: none;
@@ -90,6 +101,7 @@ nav{
     font-size: 24px;
     
 }
+/* main{background-color: blue;} */
 
 @media screen and (max-width:1024px) {
     .bar-p{
