@@ -1,113 +1,27 @@
-/* global */
-
 section{
-    /* width: 70%; */
+    width: 80%;
     margin: auto;
-    /* background-color: #fffcf7; */
-    align-items: center;
-
-}
-
-h2{
-    font-weight: lighter;
-    padding-top: 40px;
-}
-
-section div {
-    /* width: 80%; */
-    /* background-color: pink; */
-    margin: auto;
-    text-align: center;
-    /* padding-top: 60px; */
-    padding-bottom: 10px;
-}
-
-/* news */
-
-.news{
-    width: 70%;
-}
-.news-p{
-    width: 75%;
-    padding: 0;
-    padding-bottom: 50px;
-    
-}
-.news-img{
-    width: 100%;
-}
-
-
-/* product-list */
-
-.product-block{
-    width:73.68%;
-}
-
-.product-list{
-    display: flex;
+    margin-top: 50px;
     background-color: pink;
+
 }
 
-.product{
-    flex: none;
-    width: 20%;
-    /* background-color: #fffcf7; */   
+.section-title{
+    font-weight: lighter;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.section-p{
+    width: 70%;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
-.product-img{
+.news-img{
+    margin: auto;
+    width: 70%;
+    padding-bottom: 50px;
+}
+.news-img img{
     width: 100%;
-}
-
-
-/* classic */
-.list-bloxk{
-    width:50%;
-    background-color: yellowgreen;
-}
-
-
-
-
-@media(max-width:1250px){
-    .news{
-        width: 80%;
-    }
-    .product-block{
-        width:87.5%;
-    }
-    .product-list{
-        flex-wrap: wrap;
-    }
-    .product{
-        width:40%;
-    }
-}
-
-@media(max-width:500px){
-    .product-block{
-        width:80%;
-    }
-    .product{
-        width: 100%;
-    }
-}
-
-
-
-
-
-/* from vue */
-.box{
-    background-color: purple;
-    height: 200px;
-    width: 200px;
-}
-[v-cloak]{
-    display: none;
-}
-
-input{
-    margin:10px;
-    display: block;
 }
