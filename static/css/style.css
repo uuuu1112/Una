@@ -1,17 +1,27 @@
+/* secrion共用 */
 section{
-    width: 80%;
     margin: auto;
     margin-top: 50px;
-    background-color: pink;
+    
 
 }
-
+.section-news{
+    width: 70%;
+    background-color: pink;
+}
+.section-products{
+    width: 72.7%;
+}
+.section-theme{
+    width: 70%;
+}
 .section-title{
     font-weight: lighter;
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.section-p{
+/* 新消息的section */
+.news-p{
     width: 70%;
     margin: auto;
     padding-bottom: 20px;
@@ -24,4 +34,29 @@ section{
 }
 .news-img img{
     width: 100%;
+}
+/* 產品列表的section */
+.products{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+}
+.product{
+    width:21.25%;
+    margin: 0 1.875%;
+    flex: none;
+}
+.product-img img{
+    width: 100%;
+}
+
+
+@media screen and (max-width:1250px) {
+    .product{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    
 }
