@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+    color:rgb(105, 105, 105);
     font-family: 'Poppins', sans-serif;
 }
 body{
@@ -101,9 +101,9 @@ nav{
     font-size: 24px;
     
 }
-/* main{background-color: blue;} */
 
-@media screen and (max-width:1024px) {
+
+@media screen and (max-width:1250px) {
     .bar-p{
         display: none;
     }
@@ -117,5 +117,3 @@ nav{
 .sidebar-active{
     transform: translateX(0%);
 }
-
-
