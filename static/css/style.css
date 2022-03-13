@@ -38,7 +38,6 @@ section{
     display:flex;
     justify-content: center;
     flex-wrap:wrap ;
-    background-color: pink;
 }
 .product{
     width:21.25%;
@@ -50,7 +49,6 @@ section{
 }
 /* 主題的section */
 .theme{
-    background-color: pink;
     display:flex;
     justify-content: center;
     flex-wrap:wrap ;
