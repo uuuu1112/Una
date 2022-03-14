@@ -2,8 +2,6 @@
 section{
     margin: auto;
     margin-top: 50px;
-    
-
 }
 .section-news{
     width: 70%;
@@ -49,7 +47,29 @@ section{
 .product-img img{
     width: 100%;
 }
-
+/* 主題列表section */
+.theme{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+}
+.theme-left{
+    width: 50%;
+    background-color: burlywood;
+}
+.theme-left img{
+    width: 100%;
+}
+.theme-right{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    width: 50%;
+    background-color: pink;
+}
+.theme-right .product{
+    width: 45%;
+}
 
 @media screen and (max-width:1250px) {
     .product{
