@@ -1,11 +1,10 @@
 /* section共用 */
 section{
     margin: auto;
-    margin-top: 50px;
 }
 .section-news{
     width: 70%;
-    background-color: pink;
+    background-color: #fffcf7;
 }
 .section-products{
     width: 72.7%;
@@ -13,16 +12,18 @@ section{
 .section-theme{
     width: 72.7%;
 }
+.section-detail{
+    width: 70%;
+}
 .section-title{
     font-weight: lighter;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 50px;
 }
 /* 新消息的section */
 .section-p{
     width: 70%;
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .news-img{
@@ -69,15 +70,13 @@ section{
 .t-product{
     width:42.5%;
     margin:0 3.75%;
-
     flex: none;
 }
-.t-product-img img{
-    width: 100%;
-}
 .product-title{
-    margin-bottom: 7.4%;
+    margin-bottom: 7.5%;
+    text-align: left;
 }
+
 
 @media screen and (max-width:1250px) {
     .product{
