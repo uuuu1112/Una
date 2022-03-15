@@ -1,0 +1,27 @@
+.video{
+    width: 1000px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* .video-test{
+    background-color: pink;
+} */
+.burr{
+    position: absolute;
+    filter:blur(4px);
+}
+/* video{
+    position: absolute;
+    top : 30px;
+} */
+.player-icon{
+    position: absolute;
+    opacity: 0.5;
+    /* top : 30px; */
+
+    /* margin-top: 50%; */
+    
+}

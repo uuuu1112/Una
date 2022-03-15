@@ -1,4 +1,4 @@
-/* secrion共用 */
+/* section共用 */
 section{
     margin: auto;
     margin-top: 50px;
@@ -11,7 +11,7 @@ section{
     width: 72.7%;
 }
 .section-theme{
-    width: 70%;
+    width: 72.7%;
 }
 .section-title{
     font-weight: lighter;
@@ -19,7 +19,7 @@ section{
     padding-bottom: 20px;
 }
 /* 新消息的section */
-.news-p{
+.section-p{
     width: 70%;
     margin: auto;
     padding-bottom: 20px;
@@ -47,28 +47,36 @@ section{
 .product-img img{
     width: 100%;
 }
-/* 主題列表section */
+/* 主題的section */
 .theme{
     display:flex;
     justify-content: center;
     flex-wrap:wrap ;
 }
 .theme-left{
-    width: 50%;
-    background-color: burlywood;
+    width: 46.25%;
+    margin:0 1.875%;
 }
 .theme-left img{
     width: 100%;
 }
 .theme-right{
+    width: 50%;
     display:flex;
     justify-content: center;
     flex-wrap:wrap ;
-    width: 50%;
-    background-color: pink;
 }
-.theme-right .product{
-    width: 45%;
+.t-product{
+    width:42.5%;
+    margin:0 3.75%;
+
+    flex: none;
+}
+.t-product-img img{
+    width: 100%;
+}
+.product-title{
+    margin-bottom: 7.4%;
 }
 
 @media screen and (max-width:1250px) {
