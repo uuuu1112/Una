@@ -1,0 +1,17 @@
+.section-detail{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+}
+.detail-img{
+    margin-right: 10%;
+    width: 60%;
+    
+}
+.detail-img img{
+    width: 100%;
+}
+.detail-p{
+    background-color: #fffcf7;
+    width: 30%;
+}
