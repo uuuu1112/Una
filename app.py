@@ -14,6 +14,14 @@ def category():
 def product():
     return render_template("product.html")
 
+@app.route("/add")
+def add():
+    return render_template("add.html")
+
+@app.route("/edit")
+def edit():
+    return render_template("edit.html")
+
 @app.route("/test")
 def test():
     return render_template("test.html")

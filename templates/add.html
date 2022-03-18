@@ -1,0 +1,42 @@
+{% extends "layout.html"%}
+{% block css %}
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/category.css">
+{% endblock%}
+
+{% block main %}
+<a href=" {{ url_for('edit') }} ">add button</a>
+
+<section class="section-products">
+    <h1 class="section-title">Our cave of wonders</h1>
+    <div class="products">
+        <div class="product">
+            <a href=" {{url_for('edit')}} ">
+                <div class="product-img">
+                    <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
+                </div>
+                <div class="product-title">
+                    <p>Women silk</p>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="{{ url_for('edit') }}">
+                <div class="product-img">
+                    <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
+                </div>
+                <div class="product-title">
+                    <p>Women silk</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock%}
+
+{% block js %}
+
+{% endblock%}
+
+
