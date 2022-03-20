@@ -1,4 +1,4 @@
-from flask import Flask,redirect,url_for,render_template,url_for
+from flask import Flask,redirect,url_for,render_template,url_for,request
 
 app=Flask(__name__)
 
@@ -14,7 +14,11 @@ def category():
 def product():
     return render_template("product.html")
 
-@app.route("/add")
+@app.route("/productlist")
+def productlist():
+    return render_template("productlist.html")
+
+@app.route("/add",methods=['GET','POST'])
 def add():
     return render_template("add.html")
 

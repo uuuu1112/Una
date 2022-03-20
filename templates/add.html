@@ -5,33 +5,55 @@
 {% endblock%}
 
 {% block main %}
-<a href=" {{ url_for('edit') }} ">add button</a>
-
-<section class="section-products">
-    <h1 class="section-title">Our cave of wonders</h1>
-    <div class="products">
-        <div class="product">
-            <a href=" {{url_for('edit')}} ">
-                <div class="product-img">
-                    <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
+<section id="form">
+    <form action="{{ url_for('add') }}" method="post">
+        <div class="columns">
+            <div class="col1">
+                <div class="form-container">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text">
                 </div>
-                <div class="product-title">
-                    <p>Women silk</p>
+                <div class="form-container">
+                    <label for="price">Price</label>
+                    <input id="price" name="price" type="text">
                 </div>
-            </a>
+                <div class="form-container">
+                    <label for="size">Size</label>
+                    <input id="size" name="size" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="photo">Photo</label>
+                    <input id="photo" name="photo" type="text">
+                </div>
+            </div>
+            <div class="col2">
+                <div class="form-container">
+                    <label for="material">花材</label>
+                    <input id="material" name="material" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="caution">注意事項</label>
+                    <input id="caution" name="caution" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="category">分類</label>
+                    <select name="category" id="category" form="category">
+                    <option value="banq">花束</option>
+                    <option value="wedding">捧花</option>
+                    <option value="glass">玻璃罩</option>
+                    <option value="plant">盆花</option>
+                    </select>
+                </div>
+                <div class="form-container">
+                    <label for="delivery">運送</label>
+                    <input id="delivery" name="delivery" type="text">
+                </div>
+            </div>
         </div>
-        <div class="product">
-            <a href="{{ url_for('edit') }}">
-                <div class="product-img">
-                    <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
-                </div>
-                <div class="product-title">
-                    <p>Women silk</p>
-                </div>
-            </a>
-        </div>
-    </div>
+    </form>
 </section>
+
+
 
 {% endblock%}
 
