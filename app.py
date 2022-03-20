@@ -1,6 +1,6 @@
-from flask import Flask,redirect,url_for,render_template,url_for,request
+from flask import redirect,url_for,render_template,url_for,request
+from models import db,app,Product
 
-app=Flask(__name__)
 
 @app.route("/")
 def home():
@@ -20,6 +20,7 @@ def productlist():
 
 @app.route("/add",methods=['GET','POST'])
 def add():
+    print(request.form)
     return render_template("add.html")
 
 @app.route("/edit")
@@ -32,4 +33,5 @@ def test():
 
 
 if __name__=="__main__":
+    db.create_all()
     app.run(debug=True)
