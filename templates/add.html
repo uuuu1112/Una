@@ -1,0 +1,69 @@
+{% extends "layout.html"%}
+{% block css %}
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/category.css">
+{% endblock%}
+
+{% block main %}
+<section id="form">
+    <form action="{{ url_for('add') }}" method="post">
+        <div class="columns">
+            <div class="col1">
+                <div class="form-container">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="price">Price</label>
+                    <input id="price" name="price" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="size">Size</label>
+                    <input id="size" name="size" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="photo">Photo</label>
+                    <input id="photo" name="photo" type="text">
+                </div>
+            </div>
+            <div class="col2">
+                <div class="form-container">
+                    <label for="material">花材</label>
+                    <input id="material" name="material" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="caution">注意事項</label>
+                    <input id="caution" name="caution" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="category">分類</label>
+                    <select name="category" id="category" form="category">
+                    <option value="banq">花束</option>
+                    <option value="wedding">捧花</option>
+                    <option value="glass">玻璃罩</option>
+                    <option value="plant">盆花</option>
+                    </select>
+                </div>
+                <div class="form-container">
+                    <label for="delivery">運送</label>
+                    <input id="delivery" name="delivery" type="text">
+                </div>
+            </div>
+        </div>
+        <div id="form-buttons">
+            <button type="reset">Cancel</button>
+            <button type="submit">Submit</button>
+        </div>
+        
+    </form>
+</section>
+
+
+
+{% endblock%}
+
+{% block js %}
+
+{% endblock%}
+
+
