@@ -19,22 +19,12 @@ def product():
 
 @app.route("/productlist")
 def productlist():
-    product=Product.query.all
-    return render_template("productlist.html",product=product)
+    return render_template("productlist.html")
 
 
-@app.route("/add", methods=['GET', 'POST'])
+@app.route("/add",methods=["GET","POST"])
 def add():
-    if request.form:
-        print(request.form)
-        new_product = Product(name=request.form['name'], price=request.form['price'],
-                              size=request.form['size'], photo=request.form['photo'],
-                              category=request.form['category'], material=request.form['material'],
-                              caution=request.form['caution'], delivery=request.form['delivery'],
-                              alt=request.form['alt'])
-        db.session.add(new_product)
-        db.session.commit()
-        return redirect(url_for('productlist'))
+    print(request.form)
     return render_template("add.html")
 
 
@@ -43,11 +33,6 @@ def edit():
     return render_template("edit.html")
 
 
-@app.route("/test")
-def test():
-    return render_template("test.html")
-
 
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
