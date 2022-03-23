@@ -6,7 +6,7 @@
 
 {% block main %}
 <section id="form">
-    <form action="{{ url_for('add') }}" method="post">
+    <form action="{{ url_for('add') }}" method="post" id="detail">
         <div class="columns">
             <div class="col1">
                 <div class="form-container">
@@ -25,6 +25,15 @@
                     <label for="photo">Photo</label>
                     <input id="photo" name="photo" type="text">
                 </div>
+                <div class="form-container">
+                    <label for="category">分類</label>
+                    <select name="category" id="category" form="detail">
+                    <option value="banq">花束</option>
+                    <option value="wedding">捧花</option>
+                    <option value="glass">玻璃罩</option>
+                    <option value="plant">盆花</option>
+                    </select>
+                </div>
             </div>
             <div class="col2">
                 <div class="form-container">
@@ -36,17 +45,12 @@
                     <input id="caution" name="caution" type="text">
                 </div>
                 <div class="form-container">
-                    <label for="category">分類</label>
-                    <select name="category" id="category" form="category">
-                    <option value="banq">花束</option>
-                    <option value="wedding">捧花</option>
-                    <option value="glass">玻璃罩</option>
-                    <option value="plant">盆花</option>
-                    </select>
-                </div>
-                <div class="form-container">
                     <label for="delivery">運送</label>
                     <input id="delivery" name="delivery" type="text">
+                </div>
+                <div class="form-container">
+                    <label for="alt">圖片敘述</label>
+                    <input id="alt" name="alt" type="text">
                 </div>
             </div>
         </div>
@@ -54,7 +58,7 @@
             <button type="reset">Cancel</button>
             <button type="submit">Submit</button>
         </div>
-        
+
     </form>
 </section>
 
