@@ -9,7 +9,8 @@ def home():
 
 @app.route("/category")
 def category():
-    return render_template("category.html")
+    product=Product.query.all()
+    return render_template("category.html",product=product)
 
 
 @app.route("/product")
