@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add item</title>
-</head>
-<body>
+{% extends "backstage.html" %}
+
+{% block main %}
     <a class="back-btn" href="{{ url_for('productlist') }}">
         Back to product list
     </a>
@@ -82,7 +76,6 @@
             </div>
         </form>
     </section>
-</body>
-</html>
+{% endblock %}
 
 
