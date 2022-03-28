@@ -6,9 +6,9 @@
     </a>
 
     {% for item in product %}
-        <a href="{{url_for('product)}} ">
-            <h2>{{item.name}} </h2>
-            <h3>{{item.price}} </h3>
+        <a href="{{url_for('product')}} ">
+            <h2>{{item.url}} </h2>
+            <h3>{{item.name}} </h3>
         </a>
     {% endfor %}
 

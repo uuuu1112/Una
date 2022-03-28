@@ -13,9 +13,10 @@ def category():
     return render_template("category.html",product=product)
 
 
-@app.route("/product")
-def product():
-    return render_template("product.html")
+@app.route("/product/<id>")
+def product(id):
+    product=Product.query.get(id)
+    return render_template("product.html",product=product)
 
 
 @app.route("/productlist")
@@ -29,15 +30,8 @@ def add():
     if request.form:
         new_product=Product(
             url=request.form['url'],
-            alt=request.form['alt'],
             name=request.form['name'],
-            price=request.form['price'],
-            size=request.form['size'],
-            material=request.form['material'],
-            type=request.form['type'],
-            caution=request.form['caution'],
-            delivery=request.form['delivery'],
-            description=request.form['description']
+            detail=request.form['detail']
         )
         db.session.add(new_product)
         db.session.commit()
