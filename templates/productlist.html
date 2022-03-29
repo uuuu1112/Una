@@ -6,7 +6,7 @@
     </a>
 
     {% for item in product %}
-        <a href="{{url_for('product')}} ">
+        <a href="{{url_for('product',id=item.id)}} ">
             <h2>{{item.url}} </h2>
             <h3>{{item.name}} </h3>
         </a>

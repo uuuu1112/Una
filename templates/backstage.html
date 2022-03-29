@@ -10,14 +10,15 @@
     {% block css %}{% endblock %}
 </head>
 <body>
+    <div id="app"></div>
     <main>
         {% block main %}
         {% endblock %}
     </main>
 
     <script src="https://unpkg.com/vue@next"></script>
-    <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="/static/js/backstage.js"></script>
+    <script src="/static/js/main.js"></script>
+    {% block js %}
+    {% endblock %}
 </body>
 </html>
