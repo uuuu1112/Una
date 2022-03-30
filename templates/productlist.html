@@ -1,0 +1,16 @@
+{% extends "backstage.html" %}
+
+{% block main %}
+    <a href="{{ url_for('add') }}">
+        add item
+    </a>
+
+    {% for item in product %}
+        <a href="{{url_for('product')}} ">
+            <h2>{{item.url}} </h2>
+            <h3>{{item.name}} </h3>
+        </a>
+    {% endfor %}
+
+{% endblock %}
+

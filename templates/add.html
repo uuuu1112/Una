@@ -1,32 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add item</title>
-</head>
-<body>
+{% extends "backstage.html" %}
+
+{% block main %}
     <a class="back-btn" href="{{ url_for('productlist') }}">
-        <i class="fas fa-caret-left"></i>
-        Back
+        Back to product list
     </a>
     <section id="form">
         <form action="{{ url_for('add') }}" method="POST">
+            <div class="form-container">
+                <label for="url">URL</label>
+                <input id="url" name="url" type="text" placeholder="圖片來源">
+            </div>
             
-            <div class="form-container">
-                <label for="url"><i class="fas fa-camera"></i> URL</label>
-                <input id="url" name="url" type="text" placeholder="照片來源">
-            </div>
-            <div class="form-container">
-                <label for="alt">Image Alt Text</label>
-                <input id="alt" name="alt" type="text" placeholder="照片敘述">
-            </div>
-
             <div class="form-container">
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" placeholder="名稱">
             </div>
+
+            <div>
+                <legend>Detail</legend>
+                <legend>香皂花玫瑰花束尺寸</legend>
+                <div>
+                    <input id="soap1" type="radio" name="detail" value="soap1">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="soap1">$700/ 7朵玫瑰/花面寬約30cm(含包裝)、總長約40cm</label>
+                </div>
+                <div>
+                    <input id="soap2" type="radio" name="detail" value="soap2">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="soap2">$890/ 9朵玫瑰/花面寬約35cm(含包裝)、總長約50cm</label>
+                </div>
+                <div>
+                    <input id="soap3" type="radio" name="detail" value="soap3">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="soap3">$1200/ 12朵玫瑰/花面寬約45cm(含包裝)、總長約60cm</label>
+                </div>
+
+                <legend>乾燥花束尺寸</legend>
+                <div>
+                    <input id="dry1" type="radio" name="detail" value="dry1">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="dry1">$250/ 花面寬約10cm(含包裝)、總長約25cm</label>
+                </div>
+                <div>
+                    <input id="dry2" type="radio" name="detail" value="dry2">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="dry2">$299/ 花面寬約15cm(含包裝)、總長約30cm</label>
+                </div>
+                <div>
+                    <input id="dry3" type="radio" name="detail" value="dry3">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="dry3">$500/ 花面寬約23cm(含包裝)、總長約35cm</label>
+                </div>
+
+                <legend>玻璃罩尺寸</legend>
+                <div>
+                    <input id="glass1" type="radio" name="detail" value="glass1">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="glass1">$1200/ 盅罩有燈款/外徑14cm、內徑10.5cm、總高約16.5cm</label>
+                </div>
+                <div>
+                    <input id="glass2" type="radio" name="detail" value="glass2">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="glass2">$690/ 盅罩無燈款/外徑10.4cm、內徑7cm、總高約15cmm</label>
+                </div>
+                <div>
+                    <input id="glass3" type="radio" name="detail" value="glass3">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="glass3">$800/ 圓罩無燈款/外徑11.3cm、內徑8cm、總高約10cm</label>
+                </div>
+                <div>
+                    <input id="glass4" type="radio" name="detail" value="glass4">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="glass4">$860/ 圓罩有燈款/外徑11.3cm、內徑8cm、總高約12cm</label>
+                </div>
+
+                <legend>相框尺寸</legend>
+                <div>
+                    <input id="photo1" type="radio" name="detail" value="photo1">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="photo1">$720/ 方形框/19.5X19.3cm</label>
+                </div>
+                <div>
+                    <input id="photo2" type="radio" name="detail" value="photo2">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="photo2">$560/ 矩形框/19.5X14.4cm</label>
+                </div>
+            </div>
+
+            <!-- <div class="form-container">
+                <label for="alt">Image Alt Text</label>
+                <input id="alt" name="alt" type="text" placeholder="照片敘述">
+            </div>
+
             <div class="form-container">
                 <label for="price">price</label>
                 <input id="price" name="price" type="text" placeholder="價格">
@@ -76,14 +141,13 @@
                     <label for="description" style="display: none;">Description</label>
                     <textarea name="description" id="description" cols="30" rows="10" placeholder="作品敘述"></textarea>
                 </div>
-            </fieldset>
+            </fieldset> -->
             <div id="form-buttons">
                 <button type="reset">Cancel</button>
                 <button type="submit">Submit</button>
             </div>
         </form>
     </section>
-</body>
-</html>
+{% endblock %}
 
 

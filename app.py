@@ -9,21 +9,33 @@ def home():
 
 @app.route("/category")
 def category():
-    return render_template("category.html")
+    product=Product.query.all()
+    return render_template("category.html",product=product)
 
 
-@app.route("/product")
-def product():
-    return render_template("product.html")
+@app.route("/product/<id>")
+def product(id):
+    product=Product.query.get(id)
+    return render_template("product.html",product=product)
 
 
 @app.route("/productlist")
 def productlist():
-    return render_template("productlist.html")
+    product=Product.query.all()
+    return render_template("productlist.html",product=product)
 
 
 @app.route("/add",methods=["GET","POST"])
 def add():
+    if request.form:
+        new_product=Product(
+            url=request.form['url'],
+            name=request.form['name'],
+            detail=request.form['detail']
+        )
+        db.session.add(new_product)
+        db.session.commit()
+        return redirect(url_for('productlist'))
     print(request.form)
     return render_template("add.html")
 
@@ -35,4 +47,5 @@ def edit():
 
 
 if __name__ == "__main__":
+    db.create_all()
     app.run(debug=True)
