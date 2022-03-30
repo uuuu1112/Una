@@ -87,67 +87,26 @@
                 </div>
             </div>
 
-            <!-- <div class="form-container">
-                <label for="alt">Image Alt Text</label>
-                <input id="alt" name="alt" type="text" placeholder="照片敘述">
-            </div>
-
-            <div class="form-container">
-                <label for="price">price</label>
-                <input id="price" name="price" type="text" placeholder="價格">
-            </div>
-            <div class="form-container">
-                <label for="size">Size</label>
-                <input id="size" name="size" type="text" placeholder="規格">
-            </div>
-            <div class="form-container">
-                <label for="material">material</label>
-                <input id="material" name="material" type="text" placeholder="花材">
-            </div>
-            
-            <div>
-                <legend>Type</legend>
-                <input id="banquet" type="radio" name="type" value="banquet">
-                <i class="fas fa-check-circle"></i>
-                <label for="banquet">花束</label>
-                <input id="wedding" type="radio" name="type" value="wedding">
-                <i class="fas fa-check-circle"></i>
-                <label for="wedding">捧花</label>
-                <input id="glass" type="radio" name="type" value="glass">
-                <i class="fas fa-check-circle"></i>
-                <label for="glass">玻璃罩</label>
-            </div>
-            <div>
-                <legend>注意事項</legend>
-                <input id="cglass" type="radio" name="caution" value="cglass">
-                <i class="fas fa-check-circle"></i>
-                <label for="cglass">玻璃</label>
-                <input id="flower" type="radio" name="caution" value="flower">
-                <i class="fas fa-check-circle"></i>
-                <label for="flower">乾燥花</label>
-            </div>
-            <div>
-                <legend>是否可運送</legend>
-                <input id="true" type="radio" name="delivery" value="Yes">
-                <i class="fas fa-check-circle"></i>
-                <label for="true">Yes</label>
-                <input id="false" type="radio" name="delivery" value="No">
-                <i class="fas fa-check-circle"></i>
-                <label for="false">限店取</label>
-            </div>
-            <fieldset id="descr">
-                <div>
-                    <legend>Description</legend>
-                    <label for="description" style="display: none;">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="10" placeholder="作品敘述"></textarea>
-                </div>
-            </fieldset> -->
             <div id="form-buttons">
                 <button type="reset">Cancel</button>
                 <button type="submit">Submit</button>
             </div>
         </form>
     </section>
+    <template>
+        <el-radio disabled v-model="radio1" label="禁用">备选项</el-radio>
+        <el-radio disabled v-model="radio1" label="选中且禁用">备选项</el-radio>
+    </template>
 {% endblock %}
 
-
+{% block js %}
+<script>
+    export default {
+      data () {
+        return {
+          radio1: '选中且禁用'
+        };
+      }
+    }
+  </script>
+{% endblock %}

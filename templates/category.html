@@ -10,7 +10,7 @@
     <div class="products">
         {% for item in product %}
         <div class="product">
-            <div class="product-block">
+            <a href="{{url_for('product',id=item.id)}} ">
                 <div class="product-img">
                     <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
                 </div>
@@ -18,7 +18,7 @@
                     <h4>{{item.url}}</h4> 
                     <p>{{item.name}} </p>
                 </div>
-            </div>
+            </a>
         </div>
         {% endfor %}
   
