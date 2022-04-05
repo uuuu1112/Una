@@ -69,6 +69,20 @@ class Detail:
         "decoration1":"相框",
         "decoration2":"相框"
     }
+    type={
+        "marriage1":"marriage",
+        "marriage2":"marriage",
+        "marriage3":"marriage",
+        "dryflower1":"dryflower",
+        "dryflower2":"dryflower",
+        "dryflower3":"dryflower",
+        "glass1":"glass",
+        "glass2":"glass",
+        "glass3":"glass",
+        "glass4":"glass",
+        "decoration1":"decoration",
+        "decoration2":"decoration"
+    }
     
 
     

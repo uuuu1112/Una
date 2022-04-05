@@ -9,10 +9,10 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/category")
-def category():
-    product=Product.query.all()
-    return render_template("category.html",product=product)
+@app.route("/category/<type>")
+def category(type):
+    products=Product.query.filter_by(type=type).all()
+    return render_template("category.html",products=products)
 
 
 @app.route("/product/<id>")
@@ -32,11 +32,15 @@ def productlist():
 @app.route("/add",methods=["GET","POST"])
 def add():
     if request.form:
+        global detail
+        new_detail=detail.Detail()
         new_product=Product(
             url=request.form['url'],
             name=request.form['name'],
-            detail=request.form['detail']
+            detail=request.form['detail'],
+            type=new_detail.type[request.form['detail']]
         )
+        print(new_product.type)
         db.session.add(new_product)
         db.session.commit()
         return redirect(url_for('productlist'))
@@ -46,14 +50,24 @@ def add():
 
 @app.route("/edit/<id>",methods=['GET','POST'])
 def edit(id):
+    global detail
+    new_detail=detail.Detail()
     product=Product.query.get(id)
     if request.form:
         product.name=request.form['name']
         product.url=request.form['url']
         product.detail=request.form['detail']
+        product.type=new_detail.type[request.form['detail']]
         db.session.commit()
         return redirect(url_for('productlist'))
     return render_template("edit.html",product=product)
+
+@app.route("/delete/<id>")
+def delete(id):
+    product=Product.query.get(id)
+    db.session.delete(product)
+    db.session.commit()
+    return redirect(url_for("productlist"))
 
 @app.route("/test")
 def test():

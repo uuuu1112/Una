@@ -8,7 +8,7 @@
 <section class="section-products">
     <h1 class="section-title">Our cave of wonders</h1>
     <div class="products">
-        {% for item in product %}
+        {% for item in products %}
         <div class="product">
             <a href="{{url_for('product',id=item.id)}} ">
                 <div class="product-img">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="product-title">
                     <h4>{{item.url}}</h4> 
-                    <p>{{item.name}} </p>
+                    <p>{{item.name}}</p>
                 </div>
             </a>
         </div>
