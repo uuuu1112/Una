@@ -1,5 +1,7 @@
 from flask import redirect, url_for, render_template, url_for, request
 from models import db, app, Product
+import detail
+
 
 
 @app.route("/")
@@ -16,7 +18,9 @@ def category():
 @app.route("/product/<id>")
 def product(id):
     product=Product.query.get(id)
-    return render_template("product.html",product=product)
+    global detail
+    new_detail=detail.Detail()
+    return render_template("product.html",product=product,detail=new_detail)
 
 
 @app.route("/productlist")
@@ -40,13 +44,22 @@ def add():
     return render_template("add.html")
 
 
-@app.route("/edit")
-def edit():
-    return render_template("edit.html")
+@app.route("/edit/<id>",methods=['GET','POST'])
+def edit(id):
+    product=Product.query.get(id)
+    if request.form:
+        product.name=request.form['name']
+        product.url=request.form['url']
+        product.detail=request.form['detail']
+        db.session.commit()
+        return redirect(url_for('productlist'))
+    return render_template("edit.html",product=product)
 
 @app.route("/test")
 def test():
-    return render_template("test.html")
+    # global detail
+    # detail=detail.Detail()
+    return render_template("test.html",detail=detail)
 
 
 

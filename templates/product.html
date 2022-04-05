@@ -7,10 +7,20 @@
 {% block main %}
 <section class="section-detail">
     <div class="detail-img">
+        <div class="image">
+            <p>image url</p>
+            <p>{{detail.path[product.detail]}}{{product.url}}.jpg</p>
+            <p>image alt</p>
+            <p>{{product.alt}}</p>
+        </div>
+        <img src="{{detail.path[product.detail]}}{{product.url}}.jpg" alt="{{product.alt}}">
         <img src="https://assets.hermes.com/is/image/hermesproduct/atout-14-pouch--073476CKBZ-front-1-300-0-720-720_b.jpg" alt="">
     </div>
     <div class="detail-p">
-        <h1 class="section-title">Drive sneaker</h1>
+        <h1 class="section-title">{{product.name}} </h1>
+        <p>{{detail.price[product.detail]}}</p>
+        <p>{{detail.description[product.detail]}} </p>
+        <p>{{detail.size[product.detail]}}</p>
     </div>
 
 </section>
