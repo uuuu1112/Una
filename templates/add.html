@@ -18,41 +18,43 @@
 
             <div>
                 <legend>Detail</legend>
-                <legend>香皂花玫瑰花束尺寸</legend>
+                <legend>畢業花束</legend>
+                <legend>母親節花束</legend>
+                <legend>求婚花束</legend>
                 <div>
-                    <input id="soap1" type="radio" name="detail" value="soap1">
+                    <input id="marriage1" type="radio" name="detail" value="marriage1">
                     <i class="fas fa-check-circle"></i>
-                    <label for="soap1">$700/ 7朵玫瑰/花面寬約30cm(含包裝)、總長約40cm</label>
+                    <label for="marriage1">$700/ 7朵玫瑰/花面寬約30cm(含包裝)、總長約40cm</label>
                 </div>
                 <div>
-                    <input id="soap2" type="radio" name="detail" value="soap2">
+                    <input id="marriage2" type="radio" name="detail" value="marriage2">
                     <i class="fas fa-check-circle"></i>
-                    <label for="soap2">$890/ 9朵玫瑰/花面寬約35cm(含包裝)、總長約50cm</label>
+                    <label for="marriage2">$890/ 9朵玫瑰/花面寬約35cm(含包裝)、總長約50cm</label>
                 </div>
                 <div>
-                    <input id="soap3" type="radio" name="detail" value="soap3">
+                    <input id="marriage3" type="radio" name="detail" value="marriage3">
                     <i class="fas fa-check-circle"></i>
-                    <label for="soap3">$1200/ 12朵玫瑰/花面寬約45cm(含包裝)、總長約60cm</label>
-                </div>
-
-                <legend>乾燥花束尺寸</legend>
-                <div>
-                    <input id="dry1" type="radio" name="detail" value="dry1">
-                    <i class="fas fa-check-circle"></i>
-                    <label for="dry1">$250/ 花面寬約10cm(含包裝)、總長約25cm</label>
-                </div>
-                <div>
-                    <input id="dry2" type="radio" name="detail" value="dry2">
-                    <i class="fas fa-check-circle"></i>
-                    <label for="dry2">$299/ 花面寬約15cm(含包裝)、總長約30cm</label>
-                </div>
-                <div>
-                    <input id="dry3" type="radio" name="detail" value="dry3">
-                    <i class="fas fa-check-circle"></i>
-                    <label for="dry3">$500/ 花面寬約23cm(含包裝)、總長約35cm</label>
+                    <label for="marriage3">$1200/ 12朵玫瑰/花面寬約45cm(含包裝)、總長約60cm</label>
                 </div>
 
-                <legend>玻璃罩尺寸</legend>
+                <legend>乾燥花束</legend>
+                <div>
+                    <input id="dryflower1" type="radio" name="detail" value="dryflower1">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="dryflower1">$250/ 花面寬約10cm(含包裝)、總長約25cm</label>
+                </div>
+                <div>
+                    <input id="dryflower2" type="radio" name="detail" value="dryflower2">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="dryflower2">$299/ 花面寬約15cm(含包裝)、總長約30cm</label>
+                </div>
+                <div>
+                    <input id="dryflower3" type="radio" name="detail" value="dryflower3">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="dryflower3">$500/ 花面寬約23cm(含包裝)、總長約35cm</label>
+                </div>
+
+                <legend>玻璃罩盅罩</legend>
                 <div>
                     <input id="glass1" type="radio" name="detail" value="glass1">
                     <i class="fas fa-check-circle"></i>
@@ -74,17 +76,19 @@
                     <label for="glass4">$860/ 圓罩有燈款/外徑11.3cm、內徑8cm、總高約12cm</label>
                 </div>
 
-                <legend>相框尺寸</legend>
+                <legend>裝飾小物</legend>
                 <div>
-                    <input id="photo1" type="radio" name="detail" value="photo1">
+                    <input id="decoration1" type="radio" name="detail" value="decoration1">
                     <i class="fas fa-check-circle"></i>
-                    <label for="photo1">$720/ 方形框/19.5X19.3cm</label>
+                    <label for="decoration1">$720/ 方形框/19.5X19.3cm</label>
                 </div>
                 <div>
-                    <input id="photo2" type="radio" name="detail" value="photo2">
+                    <input id="decoration2" type="radio" name="detail" value="decoration2">
                     <i class="fas fa-check-circle"></i>
-                    <label for="photo2">$560/ 矩形框/19.5X14.4cm</label>
+                    <label for="decoration2">$560/ 矩形框/19.5X14.4cm</label>
                 </div>
+                <legend>婚禮系列</legend>
+                <legend>盆花花禮</legend>
             </div>
 
             <div id="form-buttons">
@@ -93,10 +97,7 @@
             </div>
         </form>
     </section>
-    <template>
-        <el-radio disabled v-model="radio1" label="禁用">备选项</el-radio>
-        <el-radio disabled v-model="radio1" label="选中且禁用">备选项</el-radio>
-    </template>
+
 {% endblock %}
 
 {% block js %}

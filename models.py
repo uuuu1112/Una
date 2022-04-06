@@ -14,6 +14,7 @@ class Product(db.Model):
     url=db.Column('url',db.String())
     name=db.Column('Name',db.String())
     detail=db.Column('Deatil',db.String())
+    type=db.Column('Type',db.String())
 
 
 
@@ -22,4 +23,5 @@ class Product(db.Model):
             Name:{self.name}
             Price:{self.price}
             Detail:{self.detail}
+            Type:{self.type}
             )'''
