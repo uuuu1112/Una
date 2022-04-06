@@ -30,20 +30,30 @@ main{
 .sidebar{
     justify-content: center;
     display: flex;
-    z-index: 2;
+    z-index: 113;
 }
 
 nav{
     background-color:#f6f1eb ;
     width: 100%;
     height: 75px;
-    z-index: 1;
+    z-index:11;
     text-align: center;
 }
 .navbar{
     width: 90%;
 }
-
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 111;
+    height: 100%;
+    width: 100%;
+}
 .bar-links{
     cursor: pointer;
     flex:none;
