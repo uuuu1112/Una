@@ -1,12 +1,17 @@
+from typing import NewType
 from flask import redirect, url_for, render_template, url_for, request
 from models import db, app, Product
 import detail
+import index
 
 
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    global index
+    productDetail=index.IndexItem.productDetail
+    newType=index.IndexItem.newType
+    return render_template("index.html",productDetail=productDetail,newType=newType)
 
 
 @app.route("/category/<type>")

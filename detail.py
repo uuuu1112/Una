@@ -83,6 +83,7 @@ class Detail:
         "decoration1":"decoration",
         "decoration2":"decoration"
     }
+    # 選項的顯示轉換用
     select={
         "marriage1":"求婚花束",
         "marriage2":"求婚花束",
