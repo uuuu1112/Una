@@ -83,6 +83,20 @@ class Detail:
         "decoration1":"decoration",
         "decoration2":"decoration"
     }
+    select={
+        "marriage1":"求婚花束",
+        "marriage2":"求婚花束",
+        "marriage3":"求婚花束",
+        "dryflower1":"乾燥花束",
+        "dryflower2":"乾燥花束",
+        "dryflower3":"乾燥花束",
+        "glass1":"玻璃盅罩",
+        "glass2":"玻璃盅罩",
+        "glass3":"玻璃盅罩",
+        "glass4":"玻璃盅罩",
+        "decoration1":"裝飾小物",
+        "decoration2":"裝飾小物"
+    }
     
 
     
