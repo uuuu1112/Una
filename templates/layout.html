@@ -50,7 +50,9 @@
             <ul class="nav-links">
                 {% for item in productDetail %}
                     <li>
-                        <a href="{{productDetail[item]['url']}}">{{productDetail[item]['title']}}</a>
+                        <a href="{{productDetail[item]['url']}}">
+                            {{productDetail[item]['title']}}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
