@@ -48,37 +48,11 @@
                 <span class="clear-p">商品選單</span>
             </div>
             <ul class="nav-links">
-                <li>
-                    <a href="#">最新創作</a>
-                </li>
-                <li>
-                    <a href="#">經典不敗</a>
-                </li>
-               
-                <li>
-                    <a href="#">捧花</a>
-                </li>
-                <li>
-                    <a href="#">花束</a>
-                </li>
-                <li>
-                    <a href="#">玻璃罩</a>
-                </li>
-                <li>
-                    <a href="#">盆花</a>
-                </li>
-                <!-- <li>
-                    <a href="#">相框</a>
-                </li>
-                <li>
-                    <a href="#">花圈</a>
-                </li>
-                <li>
-                    <a href="#">胸花</a>
-                </li>
-                <li>
-                    <a href="#">擴香石</a>
-                </li> -->
+                {% for item in productDetail %}
+                    <li>
+                        <a href="{{productDetail[item]['url']}}">{{productDetail[item]['title']}}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>   
     </div>

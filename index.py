@@ -1,42 +1,50 @@
 class IndexItem:
     productDetail={
         "graduate":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"畢業花束",
             "title":"畢業花束"
         },
         "mother":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"母親節花束",
             "title":"母親節花束"
         },
         "marriage":{
+            "url":"/category/marriage",
             "src":"",
             "alt":"求婚花束",
             "title":"求婚花束"
         },
         "dryflower":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"乾燥花束",
             "title":"乾燥花束"
         },
         "glass":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"玻璃罩",
             "title":"玻璃盅罩"
         },
         "decoration":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"婚禮小物",
             "title":"裝飾小物"
         },
         "wedding":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"婚禮捧花",
             "title":"婚禮系列"
         },
         "plants":{
-            "src":"",
+            "url":"#",
+            "src":"#",
             "alt":"乾燥花盆花",
             "title":"盆花花禮"
         }
