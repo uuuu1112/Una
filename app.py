@@ -3,16 +3,8 @@ from flask import redirect, url_for, render_template, url_for, request
 from models import db, app, Product
 import info
 
-def withSideBar(html):
-    global info
-    productDetail=info.IndexItem.productDetail
-    return render_template(
-        html,productDetail=productDetail)
-
 @app.route("/")
 def home():
-    # return withSideBar("index.html")
-    # global info
     productDetail=info.IndexItem.productDetail
     return render_template(
         "index.html",
@@ -52,7 +44,9 @@ def add():
             url=request.form['url'],
             name=request.form['name'],
             detail=request.form['detail'],
-            type=new_detail.itemCategory[request.form['detail']]["type"]
+            type=new_detail.itemCategory[request.form['detail']]["type"],
+            price=new_detail.itemCategory[request.form['detail']]["price"],
+            onseason=request.form["onseason"],
         )
         db.session.add(new_product)
         db.session.commit()

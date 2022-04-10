@@ -15,6 +15,9 @@ class Product(db.Model):
     name=db.Column('Name',db.String())
     detail=db.Column('Deatil',db.String())
     type=db.Column('Type',db.String())
+    price=db.Column('Price',db.String())
+    onseason=db.Column('onSeason',db.String())
+    
 
 
 
@@ -24,4 +27,6 @@ class Product(db.Model):
             Price:{self.price}
             Detail:{self.detail}
             Type:{self.type}
+            Price:{self.price}
+            onSeason:{self.onseason}
             )'''
