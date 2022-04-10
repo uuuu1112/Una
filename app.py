@@ -3,23 +3,25 @@ from flask import redirect, url_for, render_template, url_for, request
 from models import db, app, Product
 import info
 
-
+def withSideBar(html):
+    global info
+    productDetail=info.IndexItem.productDetail
+    return render_template(
+        html,productDetail=productDetail)
 
 @app.route("/")
 def home():
-    global info
+    # return withSideBar("index.html")
+    # global info
     productDetail=info.IndexItem.productDetail
-    newType=info.IndexItem.newType
     return render_template(
         "index.html",
-        productDetail=productDetail,
-        newType=newType)
+        productDetail=productDetail)
 
 
 @app.route("/category/<type>")
 def category(type):
     products=Product.query.filter_by(type=type).all()
-    global info
     productDetail=info.IndexItem.productDetail
     newType=info.IndexItem.newType
     return render_template(
@@ -32,7 +34,6 @@ def category(type):
 @app.route("/product/<id>")
 def product(id):
     product=Product.query.get(id)
-    global info
     new_detail=info.Detail()
     return render_template("product.html",product=product,detail=new_detail)
 
@@ -46,32 +47,28 @@ def productlist():
 @app.route("/add",methods=["GET","POST"])
 def add():
     if request.form:
-        global info
         new_detail=info.Detail()
         new_product=Product(
             url=request.form['url'],
             name=request.form['name'],
             detail=request.form['detail'],
-            type=new_detail.type[request.form['detail']]
+            type=new_detail.itemCategory[request.form['detail']]["type"]
         )
-        print(new_product.type)
         db.session.add(new_product)
         db.session.commit()
         return redirect(url_for('productlist'))
-    print(request.form)
     return render_template("add.html")
 
 
 @app.route("/edit/<id>",methods=['GET','POST'])
 def edit(id):
-    global info
     new_detail=info.Detail()
     product=Product.query.get(id)
     if request.form:
         product.name=request.form['name']
         product.url=request.form['url']
         product.detail=request.form['detail']
-        product.type=new_detail.type[request.form['detail']]
+        product.type=new_detail.itemCategory[request.form['detail']]["type"]
         db.session.commit()
         return redirect(url_for('productlist'))
     return render_template("edit.html",product=product)
