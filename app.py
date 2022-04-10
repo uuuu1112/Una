@@ -11,8 +11,10 @@ def home():
         productDetail=productDetail)
 
 
-@app.route("/category/<type>")
+@app.route("/category")
 def category(type):
+    type=request.args.get("type","")
+    onseason=request.args.get("onseason","")
     products=Product.query.filter_by(type=type).all()
     productDetail=info.IndexItem.productDetail
     newType=info.IndexItem.newType
