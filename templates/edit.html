@@ -17,6 +17,25 @@
             </div>
 
             <div>
+                <legend>最新創作/經典不敗</legend>
+                <div>
+                    <input id="newtype" type="radio" name="onseason" value="newtype" {% if product.onseason=='newtype' %} checked {% endif %}>
+                    <i class="fas fa-check-circle"></i>
+                    <label for="newtype">最新創作</label>
+                </div>
+                <div>
+                    <input id="classictype" type="radio" name="onseason" value="classictype" {% if product.onseason=='classictype' %} checked {% endif %}>
+                    <i class="fas fa-check-circle"></i>
+                    <label for="classictype">經典不敗</label>
+                </div>
+                <div>
+                    <input id="normaltype" type="radio" name="onseason" value="normaltype" {% if product.onseason=='normaltype' %} checked {% endif %}>
+                    <i class="fas fa-check-circle"></i>
+                    <label for="normaltype">一般</label>
+                </div>
+            </div>
+
+            <div>
                 <legend>Detail</legend>
                 <legend>畢業花束</legend>
                 <legend>母親節花束</legend>

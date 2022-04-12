@@ -2,6 +2,7 @@ from typing import NewType
 from flask import redirect, url_for, render_template, url_for, request
 from models import db, app, Product
 import info
+from sqlalchemy import or_
 
 @app.route("/")
 def home():
@@ -12,10 +13,16 @@ def home():
 
 
 @app.route("/category")
-def category(type):
+def category():
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
-    products=Product.query.filter_by(type=type).all()
+    if type != "":
+        products=Product.query.filter_by(type=type).all()
+    if onseason !="":
+        products=Product.query.filter_by(onseason=onseason).all()
+    else:
+        product=Product.query.all()
+    # products=Product.query.filter(or_(type==type,onseason==onseason))
     productDetail=info.IndexItem.productDetail
     newType=info.IndexItem.newType
     return render_template(
@@ -65,6 +72,8 @@ def edit(id):
         product.url=request.form['url']
         product.detail=request.form['detail']
         product.type=new_detail.itemCategory[request.form['detail']]["type"]
+        product.price=new_detail.itemCategory[request.form['detail']]["price"]
+        product.onseason=request.form['onseason']
         db.session.commit()
         return redirect(url_for('productlist'))
     return render_template("edit.html",product=product)
