@@ -9,11 +9,13 @@ def home():
     productDetail=info.IndexItem.productDetail
     return render_template(
         "index.html",
-        productDetail=productDetail)
+        productDetail=productDetail
+        )
 
 
 @app.route("/category")
 def category():
+    productDetail=info.IndexItem.productDetail
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
     if type != "":
@@ -21,22 +23,24 @@ def category():
     if onseason !="":
         products=Product.query.filter_by(onseason=onseason).all()
     else:
-        product=Product.query.all()
-    # products=Product.query.filter(or_(type==type,onseason==onseason))
-    productDetail=info.IndexItem.productDetail
-    newType=info.IndexItem.newType
+        products=Product.query.all()
     return render_template(
         "category.html",
         products=products,
-        productDetail=productDetail,
-        newType=newType)
+        productDetail=productDetail
+        )
+        
 
 
 @app.route("/product/<id>")
 def product(id):
+    productDetail=info.IndexItem.productDetail
     product=Product.query.get(id)
-    new_detail=info.Detail()
-    return render_template("product.html",product=product,detail=new_detail)
+    return render_template(
+        "product.html",
+        product=product,
+        productDetail=productDetail
+        )
 
 
 @app.route("/productlist")

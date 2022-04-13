@@ -1,5 +1,5 @@
-class Detail:
-    itemCategory={
+class Category:
+    detail={
         "marriage1":{"select":"求婚花束","type":"marriage","alt":"求婚花束","path":"/static/img/products/marriage/soap7/","price":"$700","description":"7朵玫瑰","size":"花面寬約30cm(含包裝)、總長約40cm"},
         "marriage2":{"select":"求婚花束","type":"marriage","alt":"求婚花束","path":"/static/img/products/marriage/soap9/","price":"$890","description":"9朵玫瑰","size":"花面寬約35cm(含包裝)、總長約50cm"},
         "marriage3":{"select":"求婚花束","type":"marriage","alt":"求婚花束","path":"/static/img/products/marriage/soap12/","price":"$1200","description":"12朵玫瑰","size":"花面寬約45cm(含包裝)、總長約60cm"},
@@ -16,84 +16,17 @@ class Detail:
 
  
 
-class IndexItem:
-    productDetail={
-        "graduate":{
-            "url":"#",
-            "src":"#",
-            "alt":"畢業花束",
-            "title":"畢業花束"
-        },
-        "mother":{
-            "url":"#",
-            "src":"#",
-            "alt":"母親節花束",
-            "title":"母親節花束"
-        },
-        "marriage":{
-            "url":"/category/marriage",
-            "src":"",
-            "alt":"求婚花束",
-            "title":"求婚花束"
-        },
-        "dryflower":{
-            "url":"#",
-            "src":"#",
-            "alt":"乾燥花束",
-            "title":"乾燥花束"
-        },
-        "glass":{
-            "url":"#",
-            "src":"#",
-            "alt":"玻璃罩",
-            "title":"玻璃盅罩"
-        },
-        "decoration":{
-            "url":"#",
-            "src":"#",
-            "alt":"婚禮小物",
-            "title":"裝飾小物"
-        },
-        "wedding":{
-            "url":"#",
-            "src":"#",
-            "alt":"婚禮捧花",
-            "title":"婚禮系列"
-        },
-        "plants":{
-            "url":"#",
-            "src":"#",
-            "alt":"乾燥花盆花",
-            "title":"盆花花禮"
-        }
+class SideBar:
+    detail={
+        "graduate":{"url":"#","src":"#","alt":"畢業花束","title":"畢業花束"},
+        "mother":{"url":"#","src":"#","alt":"母親節花束","title":"母親節花束"},
+        "marriage":{"url":"/category/marriage","src":"","alt":"求婚花束","title":"求婚花束"},
+        "dryflower":{"url":"#","src":"#","alt":"乾燥花束","title":"乾燥花束"},
+        "glass":{"url":"#","src":"#","alt":"玻璃罩","title":"玻璃盅罩"},
+        "decoration":{"url":"#","src":"#","alt":"婚禮小物","title":"裝飾小物"},
+        "wedding":{"url":"#","src":"#","alt":"婚禮捧花", "title":"婚禮系列"},
+        "plants":{ "url":"#","src":"#","alt":"乾燥花盆花","title":"盆花花禮"}
     }
-    newType={
-        "main":{
-            "src":"",
-            "alt":""
-        },
-        "procucts":{
-            "item1":{
-                "src":"",
-                "alt":"",
-                "title":""
-            },
-            "item2":{
-                "src":"",
-                "alt":"",
-                "title":""
-            },
-            "item3":{
-                "src":"",
-                "alt":"",
-                "title":""
-            },
-            "item4":{
-                "src":"",
-                "alt":"",
-                "title":""
-            }
-        }
-    }
+
 
     
