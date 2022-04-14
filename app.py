@@ -4,18 +4,20 @@ from models import db, app, Product
 import info
 from sqlalchemy import or_
 
-@app.route("/")
+# 主頁
+@app.route("/") 
 def home():
-    productDetail=info.IndexItem.productDetail
+    sideBarDetail=info.SideBar.detail
     return render_template(
         "index.html",
-        productDetail=productDetail
+        sideBarDetail=sideBarDetail
         )
 
-
+# 分類頁面
 @app.route("/category")
 def category():
-    productDetail=info.IndexItem.productDetail
+    sideBarDetail=info.SideBar.detail
+
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
     if type != "":
@@ -27,38 +29,43 @@ def category():
     return render_template(
         "category.html",
         products=products,
-        productDetail=productDetail
+        sideBarDetail=sideBarDetail
         )
         
-
-
+# 商品頁面
 @app.route("/product/<id>")
 def product(id):
-    productDetail=info.IndexItem.productDetail
+    sideBarDetail=info.SideBar.detail
+    categoryDetail=info.Category.detail
+
     product=Product.query.get(id)
     return render_template(
         "product.html",
         product=product,
-        productDetail=productDetail
+        sideBarDetail=sideBarDetail,
+        categoryDetail=categoryDetail
         )
 
-
+# 可編輯分類頁面後台
 @app.route("/productlist")
 def productlist():
     product=Product.query.all()
-    return render_template("productlist.html",product=product)
+    return render_template(
+        "productlist.html",
+        product=product
+        )
 
-
+# 增加商品頁面
 @app.route("/add",methods=["GET","POST"])
 def add():
     if request.form:
-        new_detail=info.Detail()
+        categoryDetail=info.Category.detail
         new_product=Product(
             url=request.form['url'],
             name=request.form['name'],
             detail=request.form['detail'],
-            type=new_detail.itemCategory[request.form['detail']]["type"],
-            price=new_detail.itemCategory[request.form['detail']]["price"],
+            type=categoryDetail[request.form['detail']]["type"],
+            price=categoryDetail[request.form['detail']]["price"],
             onseason=request.form["onseason"],
         )
         db.session.add(new_product)
@@ -66,22 +73,23 @@ def add():
         return redirect(url_for('productlist'))
     return render_template("add.html")
 
-
+# 編輯商品頁面
 @app.route("/edit/<id>",methods=['GET','POST'])
 def edit(id):
-    new_detail=info.Detail()
+    categoryDetail=info.Category.detail
     product=Product.query.get(id)
     if request.form:
         product.name=request.form['name']
         product.url=request.form['url']
         product.detail=request.form['detail']
-        product.type=new_detail.itemCategory[request.form['detail']]["type"]
-        product.price=new_detail.itemCategory[request.form['detail']]["price"]
+        product.type=categoryDetail[request.form['detail']]["type"]
+        product.price=categoryDetail[request.form['detail']]["price"]
         product.onseason=request.form['onseason']
         db.session.commit()
         return redirect(url_for('productlist'))
     return render_template("edit.html",product=product)
 
+# 刪除商品
 @app.route("/delete/<id>")
 def delete(id):
     product=Product.query.get(id)

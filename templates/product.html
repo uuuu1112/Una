@@ -8,14 +8,14 @@
 <section class="section-detail">
     <div class="detail-img">
 
-        <img src="{{productDetail.itemCategory[product.detail]['path']}}{{product.url}}.jpg" alt="{{product.alt}}">
+        <img src="{{categoryDetail[product.detail]['path']}}{{product.url}}.jpg" alt="{{product.alt}}">
         
     </div>
     <div class="detail-p">
         <h1 class="section-title">{{product.name}} </h1>
         <p>{{product.price}}</p>
-        <p>{{productDetail.itemCategory[product.detail]["description"]}}</p>
-        <p>{{productDetail.itemCategory[product.detail]["size"]}}</p>
+        <p>{{categoryDetail[product.detail]["description"]}}</p>
+        <p>{{categoryDetail[product.detail]["size"]}}</p>
     </div>
 
 </section>
