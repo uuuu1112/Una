@@ -10,7 +10,7 @@ def home():
     return render_template(
         "index.html",
         sideBarDetail=info.SideBar.detail,
-
+        categoryAll=info.Category.all
         )
 
 @app.route("/contact") 
@@ -18,7 +18,7 @@ def contact():
     return render_template(
         "contact.html",
         sideBarDetail=info.SideBar.detail,
-
+        categoryAll=info.Category.all
         )
 
 # 分類頁面
@@ -36,7 +36,7 @@ def category():
         "category.html",
         products=products,
         sideBarDetail=info.SideBar.detail,
-
+        categoryAll=info.Category.all
         )
         
 # 商品頁面
@@ -48,7 +48,7 @@ def product(id):
         product=product,
         sideBarDetail=info.SideBar.detail,
         categoryDetail=info.Category.detail,
-
+        categoryAll=info.Category.all
         )
 
 # 可編輯分類頁面後台
