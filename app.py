@@ -21,11 +21,11 @@ def category():
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
     if type != "":
-        products=Product.query.filter_by(type=type).all()
+        products=Product.query.filter_by(type=type).order_by(Product.price).all()
     if onseason !="":
         products=Product.query.filter_by(onseason=onseason).all()
     else:
-        products=Product.query.all()
+        products=Product.query.order_by(Product.type).all()
     return render_template(
         "category.html",
         products=products,
@@ -77,6 +77,7 @@ def add():
 @app.route("/edit/<id>",methods=['GET','POST'])
 def edit(id):
     categoryDetail=info.Category.detail
+
     product=Product.query.get(id)
     if request.form:
         product.name=request.form['name']
@@ -97,11 +98,13 @@ def delete(id):
     db.session.commit()
     return redirect(url_for("productlist"))
 
-@app.route("/test")
-def test():
-    # global detail
-    # detail=detail.Detail()
-    return render_template("test.html",detail=info)
+@app.route("/layout")
+def layout():
+    sideBarDetail=info.SideBar.detail
+    return render_template(
+        "layout.html",
+        sideBarDetail=sideBarDetail
+        )
 
 
 
