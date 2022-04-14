@@ -13,12 +13,7 @@ class Category:
         "decoration1": {"select": "裝飾小物", "type": "decoration", "alt": "相框", "path": "/static/img/products/decoration/", "price": "720", "description": "方形框", "size": "19.5X19.3cm"},
         "decoration2": {"select": "裝飾小物", "type": "decoration", "alt": "相框", "path": "/static/img/products/decoration/", "price": "560", "description": "矩形框", "size": "19.5X14.4cm"}
     }
-
-
-class SideBar:
-    detail = {
-        "newtype": {"url": "/category?onseason=newtype", "src": "#", "alt": "最新創作", "title": "最新創作"},
-        "classictype": {"url": "/category?onseason=classictype", "src": "#", "alt": "經典不敗", "title": "經典不敗"},
+    group = {
         "graduate": {"url": "/category?type=graduate", "src": "#", "alt": "畢業花束", "title": "畢業花束"},
         "mother": {"url": "/category?type=mother", "src": "#", "alt": "母親節花束", "title": "母親節花束"},
         "marriage": {"url": "/category?type=marriage", "src": "", "alt": "求婚花束", "title": "求婚花束"},
@@ -28,5 +23,18 @@ class SideBar:
         "wedding": {"url": "/category?type=wedding", "src": "#", "alt": "婚禮捧花", "title": "婚禮系列"},
         "plants": {"url": "/category?type=plants", "src": "#", "alt": "乾燥花盆花", "title": "盆花花禮"}
     }
-    notInSideBar = ["decoration", "graduate"]
-    notIncategory = ["newtype", "classictype"]
+
+
+class SideBar:
+    detail = {
+        "newtype": {"url": "/category?onseason=newtype", "title": "最新創作"},
+        "classictype": {"url": "/category?onseason=classictype", "title": "經典不敗"},
+        "graduate": {"url": "/category?type=graduate", "title": "畢業花束"},
+        "mother": {"url": "/category?type=mother", "title": "母親節花束"},
+        "marriage": {"url": "/category?type=marriage", "title": "求婚花束"},
+        "dryflower": {"url": "/category?type=dryflower", "title": "乾燥花束"},
+        "glass": {"url": "/category?type=glass", "title": "玻璃盅罩"},
+        "decoration": {"url": "/category?type=decoration", "title": "裝飾小物"},
+        "wedding": {"url": "/category?type=wedding", "title": "婚禮系列"},
+        "plants": {"url": "/category?type=plants", "title": "盆花花禮"}
+    }

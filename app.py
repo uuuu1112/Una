@@ -7,17 +7,23 @@ from sqlalchemy import or_
 # 主頁
 @app.route("/") 
 def home():
-    sideBarDetail=info.SideBar.detail
     return render_template(
         "index.html",
-        sideBarDetail=sideBarDetail
+        sideBarDetail=info.SideBar.detail,
+
+        )
+
+@app.route("/contact") 
+def contact():
+    return render_template(
+        "contact.html",
+        sideBarDetail=info.SideBar.detail,
+
         )
 
 # 分類頁面
 @app.route("/category")
 def category():
-    sideBarDetail=info.SideBar.detail
-
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
     if type != "":
@@ -29,21 +35,20 @@ def category():
     return render_template(
         "category.html",
         products=products,
-        sideBarDetail=sideBarDetail
+        sideBarDetail=info.SideBar.detail,
+
         )
         
 # 商品頁面
 @app.route("/product/<id>")
 def product(id):
-    sideBarDetail=info.SideBar.detail
-    categoryDetail=info.Category.detail
-
     product=Product.query.get(id)
     return render_template(
         "product.html",
         product=product,
-        sideBarDetail=sideBarDetail,
-        categoryDetail=categoryDetail
+        sideBarDetail=info.SideBar.detail,
+        categoryDetail=info.Category.detail,
+
         )
 
 # 可編輯分類頁面後台
