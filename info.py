@@ -25,19 +25,8 @@ class Category:
         "wedding": {"url": "/category?type=wedding", "src": "#", "alt": "婚禮捧花", "title": "婚禮系列"},
         "plants": {"url": "/category?type=plants", "src": "#", "alt": "乾燥花盆花", "title": "盆花花禮"}
     }
+    inIndex=["graduate","mother","marriage","dryflower","glass","decoration","wedding","plants"]
 
 
 class SideBar:
-    # detail = {
-    #     "newtype": {"url": "/category?onseason=newtype", "title": "最新創作"},
-    #     "classictype": {"url": "/category?onseason=classictype", "title": "經典不敗"},
-    #     "graduate": {"url": "/category?type=graduate", "title": "畢業花束"},
-    #     "mother": {"url": "/category?type=mother", "title": "母親節花束"},
-    #     "marriage": {"url": "/category?type=marriage", "title": "求婚花束"},
-    #     "dryflower": {"url": "/category?type=dryflower", "title": "乾燥花束"},
-    #     "glass": {"url": "/category?type=glass", "title": "玻璃盅罩"},
-    #     "decoration": {"url": "/category?type=decoration", "title": "裝飾小物"},
-    #     "wedding": {"url": "/category?type=wedding", "title": "婚禮系列"},
-    #     "plants": {"url": "/category?type=plants", "title": "盆花花禮"}
-    # }
     detail=["newtype","classictype","graduate","mother","marriage","dryflower","glass","decoration","wedding","plants"]

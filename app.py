@@ -10,7 +10,8 @@ def home():
     return render_template(
         "index.html",
         sideBarDetail=info.SideBar.detail,
-        categoryAll=info.Category.all
+        categoryAll=info.Category.all,
+        categoryinIndex=info.Category.inIndex
         )
 
 @app.route("/contact") 
@@ -57,7 +58,8 @@ def productlist():
     product=Product.query.all()
     return render_template(
         "productlist.html",
-        product=product
+        product=product,
+        categoryDetail=info.Category.detail,
         )
 
 # 增加商品頁面
