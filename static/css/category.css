@@ -1,5 +1,25 @@
-
-.titlefilter-block{
+.filter-block{
     margin: auto;
     width: 80%;
+    display: flex;
+    padding: 10px;
+}
+.block-item{
+    display: flex;
+    padding: 5px;
+}
+
+.filter-block h2{
+    margin: auto;
+    align-items: center;
+}
+.filter-block img{
+    height: 30px;
+}
+
+
+.category-options ul,.onseason-options ul{
+    display: flex;
+    background-color: #fffcf7;
+    margin: 5px;
 }

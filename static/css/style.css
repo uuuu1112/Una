@@ -22,11 +22,12 @@ section{
 }
 .section-filter{
     display: flex;
-    padding: 15px 0px;
+    padding: 8px 0px;
     font-weight: lighter;
+    background-color: #fffcf7;
+    
 }
 .section-filter h2{
-    padding-bottom: 15px;
     padding-right: 10px;
 }
 /* 新消息的section */

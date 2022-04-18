@@ -37,6 +37,8 @@ def category():
         "category.html",
         products=products,
         sideBarDetail=info.SideBar.detail,
+        sideBarOnly=info.SideBar.only,
+        categoryinIndex=info.Category.inIndex,
         categoryAll=info.Category.all,
         categoryDetail=info.Category.detail,
         )
