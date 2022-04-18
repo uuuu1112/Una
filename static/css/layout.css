@@ -111,6 +111,18 @@ nav{
     .bar-p{
         display: none;
     }
+    /* .section-news{
+        width: 90%;
+    }
+    .section-products{
+        width: 90%;
+    }
+    .section-theme{
+        width: 90%;
+    }
+    .section-detail{
+        width: 90%;
+    } */
 }
 
 @media screen and (max-width:768px) {

@@ -16,6 +16,7 @@ section{
     width: 70%;
 }
 .section-title{
+    justify-content: center;
     font-weight: lighter;
     display: flex;
     padding: 20px 0px;
@@ -89,9 +90,33 @@ section{
 }
 
 
+
+
+
 @media screen and (max-width:1250px) {
+
+    .section-news{
+        width: 80%;
+    }
+    .section-products{
+        width: 80%;
+    }
+    .section-theme{
+        width: 80%;
+    }
+    .section-detail{
+        width: 80%;
+    }
+
     .product{
-        width: 50%;
+        width: 35%;
+    }
+
+    .theme-left{
+        width: 100%;
+    }
+    .theme-right{
+        width: 100%;
     }
 }
 
