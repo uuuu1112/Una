@@ -6,15 +6,18 @@
 }
 .block-item{
     display: flex;
-    padding: 5px;
+    padding:0px 5px;
 }
 
-.filter-block h2{
+.filter-block h3{
     margin: auto;
     align-items: center;
 }
 .filter-block img{
     height: 30px;
+}
+.expand-less{
+    display:none;
 }
 
 
