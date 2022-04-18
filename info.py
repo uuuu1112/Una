@@ -16,17 +16,18 @@ class Category:
     all = {
         "newtype": {"url": "/category?onseason=newtype", "title": "最新創作"},
         "classictype": {"url": "/category?onseason=classictype", "title": "經典不敗"},
-        "graduate": {"url": "/category?type=graduate", "src": "#", "alt": "畢業花束", "title": "畢業花束"},
-        "mother": {"url": "/category?type=mother", "src": "#", "alt": "母親節花束", "title": "母親節花束"},
-        "marriage": {"url": "/category?type=marriage", "src": "", "alt": "求婚花束", "title": "求婚花束"},
-        "dryflower": {"url": "/category?type=dryflower", "src": "#", "alt": "乾燥花束", "title": "乾燥花束"},
-        "glass": {"url": "/category?type=glass", "src": "#", "alt": "玻璃罩", "title": "玻璃盅罩"},
-        "decoration": {"url": "/category?type=decoration", "src": "#", "alt": "婚禮小物", "title": "裝飾小物"},
-        "wedding": {"url": "/category?type=wedding", "src": "#", "alt": "婚禮捧花", "title": "婚禮系列"},
-        "plants": {"url": "/category?type=plants", "src": "#", "alt": "乾燥花盆花", "title": "盆花花禮"}
+        "graduate": {"url": "/category?type=graduate", "src": "/static/img/products/glass/S__88014851", "alt": "畢業花束", "title": "畢業花束"},
+        "mother": {"url": "/category?type=mother", "src": "/static/img/products/glass/S__88014851", "alt": "母親節花束", "title": "母親節花束"},
+        "marriage": {"url": "/category?type=marriage", "src": "/static/img/products/glass/S__88014851", "alt": "求婚花束", "title": "求婚花束"},
+        "dryflower": {"url": "/category?type=dryflower", "src": "/static/img/products/glass/S__88014851", "alt": "乾燥花束", "title": "乾燥花束"},
+        "glass": {"url": "/category?type=glass", "src": "/static/img/products/glass/S__88014851", "alt": "玻璃罩", "title": "玻璃盅罩"},
+        "decoration": {"url": "/category?type=decoration", "src": "/static/img/products/glass/S__88014851", "alt": "婚禮小物", "title": "裝飾小物"},
+        "wedding": {"url": "/category?type=wedding", "src": "/static/img/products/glass/S__88014851", "alt": "婚禮捧花", "title": "婚禮系列"},
+        "plants": {"url": "/category?type=plants", "src": "/static/img/products/glass/S__88014851", "alt": "乾燥花盆花", "title": "盆花花禮"}
     }
     inIndex=["graduate","mother","marriage","dryflower","glass","decoration","wedding","plants"]
 
 
 class SideBar:
     detail=["newtype","classictype","graduate","mother","marriage","dryflower","glass","decoration","wedding","plants"]
+    only=["newtype","classictype"]

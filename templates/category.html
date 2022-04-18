@@ -5,14 +5,24 @@
 {% endblock%}
 
 {% block main %}
-<section class="section-products">
-    <h1 class="section-title">Our cave of wonders</h1>
+
+<div class="title-filter">
+    <div class="titlefilter-block">
+        <h1 class="section-title">Our cave of wonders</h1>
+        <div class="section-filter">
+            <h2>類別</h2>
+            <h2>最新/經典</h2>
+        </div>
+    </div>
+</div>
+ 
+<section class="section-products">  
     <div class="products">
         {% for item in products %}
         <div class="product">
             <a href="{{url_for('product',id=item.id)}} ">
                 <div class="product-img">
-                    <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
+                    <img src="{{categoryDetail[item.detail]['path']}}{{item.url}}.jpg" alt="{{categoryDetail[item.detail]['alt']}}">
                 </div>
                 <div class="product-title">
                     <p>{{item.name}}</p>
@@ -21,18 +31,6 @@
             </a>
         </div>
         {% endfor %}
-  
-  
-        <div class="product">
-            <div class="product-block">
-                <div class="product-img">
-                    <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
-                </div>
-                <div class="product-title">
-                    <p>Women silk</p>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 

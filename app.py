@@ -37,7 +37,8 @@ def category():
         "category.html",
         products=products,
         sideBarDetail=info.SideBar.detail,
-        categoryAll=info.Category.all
+        categoryAll=info.Category.all,
+        categoryDetail=info.Category.detail,
         )
         
 # 商品頁面

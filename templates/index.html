@@ -18,9 +18,9 @@
     <div class="products">
         {% for item in categoryinIndex %}
             <div class="product">
-                <a href="#">
+                <a href="{{categoryAll[item]['url']}}">
                     <div class="product-img">
-                        <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
+                        <img src="{{categoryAll[item]['src']}}.jpg" alt="">
                     </div>
                     <div class="product-title">
                         <p>{{categoryAll[item]["title"]}}</p>

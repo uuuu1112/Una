@@ -17,7 +17,17 @@ section{
 }
 .section-title{
     font-weight: lighter;
-    padding: 50px;
+    display: flex;
+    padding: 20px 0px;
+}
+.section-filter{
+    display: flex;
+    padding: 15px 0px;
+    font-weight: lighter;
+}
+.section-filter h2{
+    padding-bottom: 15px;
+    padding-right: 10px;
 }
 /* 新消息的section */
 .section-p{
