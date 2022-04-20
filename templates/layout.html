@@ -11,8 +11,28 @@
     {% block css %}{% endblock %}
 </head>
 <body>
-    <div class="mask">
+    <div class="sidebar">
+        <div class="sidebar-block">
+
+            <div class="clear">
+                <img src="/static/img/layout/clear.png" alt="clear" class="clear-img">
+                <span class="clear-p">商品選單</span>
+            </div>
+
+            <ul class="nav-links">
+                {% for item in sideBarDetail %}
+                    <li>
+                        <a href="{{categoryAll[item]['url']}}">
+                            {{categoryAll[item]['title']}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>   
     </div>
+    <div class="mask"></div>
+    
     <nav>
         <div class="navbar">
 
@@ -37,27 +57,11 @@
             </div>
             
         </div> 
+
+        
     </nav>
     
-    <div class="sidebar">
-        
-        <div class="sidebar-block">
-            
-            <div class="clear">
-                <img src="/static/img/layout/clear.png" alt="clear" class="clear-img">
-                <span class="clear-p">商品選單</span>
-            </div>
-            <ul class="nav-links">
-                {% for item in sideBarDetail %}
-                    <li>
-                        <a href="{{categoryAll[item]['url']}}">
-                            {{categoryAll[item]['title']}}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>   
-    </div>
+    
     
     <main>
         {% block main%}
