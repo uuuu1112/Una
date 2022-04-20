@@ -96,27 +96,28 @@ section{
 @media screen and (max-width:1250px) {
 
     .section-news{
-        width: 80%;
+        width: 75%;
     }
     .section-products{
         width: 80%;
     }
     .section-theme{
-        width: 80%;
+        width: 90%;
     }
     .section-detail{
         width: 80%;
     }
 
     .product{
-        width: 35%;
+        width: 45%;
     }
 
     .theme-left{
-        width: 100%;
+        width: 83%;
     }
     .theme-right{
-        width: 100%;
+        margin: 5% 0%;
+        width: 90%;
     }
 }
 
