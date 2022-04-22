@@ -108,13 +108,17 @@ def delete(id):
     db.session.commit()
     return redirect(url_for("productlist"))
 
-@app.route("/layout")
-def layout():
-    sideBarDetail=info.SideBar.detail
+@app.route("/test")
+def test():
     return render_template(
-        "layout.html",
-        sideBarDetail=sideBarDetail
+        "test.html",
         )
+
+@app.route("/test2")
+def test2():
+    return render_template(
+        "test2.html"
+    )
 
 
 

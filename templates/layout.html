@@ -11,31 +11,28 @@
     {% block css %}{% endblock %}
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-block">
-
-            <div class="clear">
-                <img src="/static/img/layout/clear.png" alt="clear" class="clear-img">
-                <span class="clear-p">商品選單</span>
-            </div>
-
-            <ul class="nav-links">
-                {% for item in sideBarDetail %}
-                    <li>
-                        <a href="{{categoryAll[item]['url']}}">
-                            {{categoryAll[item]['title']}}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-
-        </div>   
-    </div>
-    <div class="mask"></div>
+    
     
     <nav>
+        <div class="sidebar">
+            <div class="sidebar-block">
+                <div class="clear">
+                    <img src="/static/img/layout/clear.png" alt="clear" class="clear-img">
+                    <span class="clear-p">商品選單</span>
+                </div>
+                <ul class="nav-links">
+                    {% for item in sideBarDetail %}
+                        <li>
+                            <a href="{{categoryAll[item]['url']}}">
+                                {{categoryAll[item]['title']}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>   
+        </div>
+        <div class="mask"></div>
         <div class="navbar">
-
             <div class="bar-links menu">
                 <img src="/static/img/layout/menu.png" alt="花店商品" class="bar-img">
                 <span class="bar-p"> Menu</span>
@@ -45,20 +42,15 @@
                     <img src="/static/img/layout/Una.png" alt="愛妤花店logo" class="logo">
                 </a>
             </div>
-            
             <div class="bar-links contact">
                 <img src="/static/img/layout/message.png" alt="聯絡花店" class="bar-img">
                 <span class="bar-p"> Contact</span>
             </div>
-            
             <div class="bar-links info">
                 <img src="/static/img/layout/info.png" alt="關於花店" class="bar-img">
                 <span class="bar-p"> About</span>
             </div>
-            
         </div> 
-
-        
     </nav>
     
     
