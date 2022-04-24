@@ -1,14 +1,29 @@
 {% extends "layout.html"%}
 {% block css %}
 <link rel="stylesheet"  href="/static/css/style.css">
-<link rel="stylesheet"  href="/static/css/product.css">
+<link rel="stylesheet"  href="/static/css/contact.css">
 {% endblock%}
     
 {% block main %}
+<section class="section-theme">
+    <h2>注意事項</h2>
+    {% for item in precautionItems %}
+        <button class="accordion">{{precautionItems[item]["title"]}}</button>
+        <div class="panel">
+            <ul>
+                {% for content in precautionItems[item]["content"]%}
+                    <li>{{content}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+
+</section>
+
 
 
 {% endblock%}
 
 {% block js %}
-
+<script src="/static/js/contact.js"></script>
 {% endblock%}

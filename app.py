@@ -11,7 +11,7 @@ def home():
         "index.html",
         sideBarDetail=info.SideBar.detail,
         categoryAll=info.Category.all,
-        categoryinIndex=info.Category.inIndex
+        categoryinIndex=info.Category.inIndex,
         )
 
 @app.route("/contact") 
@@ -19,7 +19,8 @@ def contact():
     return render_template(
         "contact.html",
         sideBarDetail=info.SideBar.detail,
-        categoryAll=info.Category.all
+        categoryAll=info.Category.all,
+        precautionItems=info.Precaution.items
         )
 
 # 分類頁面
