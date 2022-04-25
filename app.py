@@ -30,11 +30,17 @@ def category():
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
     if type != "":
+        print("1",type)
         products=Product.query.filter_by(type=type).order_by(Product.price).all()
     if onseason !="":
+        print("2",type)
         products=Product.query.filter_by(onseason=onseason).all()
-    else:
+    if type=="" and onseason=="":
+        print("3",type)
         products=Product.query.order_by(Product.type).all()
+    # else:
+    #     print("3",type)
+    #     products=Product.query.order_by(Product.type).all()
     return render_template(
         "category.html",
         products=products,
@@ -64,6 +70,7 @@ def productlist():
         "productlist.html",
         product=product,
         categoryDetail=info.Category.detail,
+        categoryOnSeason=info.Category.onseason,
         )
 
 # 增加商品頁面
@@ -104,7 +111,13 @@ def edit(id):
         product.onseason=request.form['onseason']
         db.session.commit()
         return redirect(url_for('productlist'))
-    return render_template("edit.html",product=product)
+    return render_template(
+        "edit.html",
+        product=product,
+        categoryDetail=categoryDetail,
+        categoryAll=info.Category.all,
+        categoryPureType=info.Category.pureType,
+        )
 
 # 刪除商品
 @app.route("/delete/<id>")

@@ -19,7 +19,6 @@ class Category:
         "mother3":{"select":"母親節系列","type":"mother","alt":"母親節花束","path":"/static/products/mother","price":"$250","description":"單束康乃馨花束","size":"花面寬約13cm(含包裝)、總長約37cm (色系：粉/紅)","color":"色系：粉/紅","info":"$250/ 單束康乃馨花束/花面寬約13cm(含包裝)、總長約37cm(色系：粉/紅)",},
         "mother4":{"select":"母親節系列","type":"mother","alt":"母親節花束","path":"/static/products/mother","price":"$150","description":"單枝康乃馨花束","size":"花面寬約13cm(含包裝)、總長約37cm (色系：紅/粉/紫)","color":"色系：紅/粉/紫","info":"$150/ 單枝康乃馨花束/花面寬約13cm(含包裝)、總長約37cm(色系：紅/粉/紫)",},
         "mother5":{"select":"母親節系列","type":"mother","alt":"母親節禮物","path":"/static/products/mother","price":"$1450","description":"永生花康乃馨玻璃盅罩(圈燈電池款)","size":"外徑14cm、內徑10.5cm、總高約16.5cm (色系：紅/粉/粉橘)","color":"色系：紅/粉/粉橘","info":"$1450/ 永生花康乃馨玻璃盅罩(圈燈電池款)/外徑14cm、內徑10.5cm、總高約16.5cm(色系：紅/粉/粉橘)",},
-
     }
     all = {
         "all":{"title":"所有作品","url":"/category","src":"/static/img/category/LINE_ALBUM_捧花_220423_2","alt":"花店推薦",},
@@ -34,6 +33,7 @@ class Category:
         "wedding": {"title": "婚禮系列","url": "/category?type=wedding", "src": "/static/img/category/LINE_ALBUM_捧花_220423_0", "alt": "婚禮捧花", },
         "plants": {"title": "盆花花禮","url": "/category?type=plants", "src": "/static/img/category/LINE_ALBUM_花禮盆器_220423_0", "alt": "乾燥花盆花", }
     }
+    onseason={"normaltype":"一般","classictype":"經典不敗","newtype":"最新創作"}
     inIndex=["all","mother","marriage","dryflower","glass","decoration","wedding","plants"]
     pureType=["marriage","dryflower","glass","decoration","mother","wedding","plants","graduate"]
 
@@ -52,7 +52,7 @@ class HomePage:
     onseason={
         "title":"謝謝媽咪!",
         "url":"",
-        "paragraph":"小時候最想做的事是快快長大，而長大後最希望的事是你慢慢變老。",
+        "paragraph":"小時候最想做的事是快快長大，而長大後最希望的是你慢慢變老。",
         "src":"/static/img/index/news/LINE_ALBUM_母親節系列_220424_9",
         "alt":"母親節禮物",
     }

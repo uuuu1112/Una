@@ -21,17 +21,17 @@
 
             <div class="left">
                 <legend>最新創作/經典不敗</legend>
-                <div>
+                <div class="radio-item">
                     <input id="newtype" type="radio" name="onseason" value="newtype">
                     <i class="fas fa-check-circle"></i>
                     <label for="newtype">最新創作</label>
                 </div>
-                <div>
+                <div class="radio-item">
                     <input id="classictype" type="radio" name="onseason" value="classictype">
                     <i class="fas fa-check-circle"></i>
                     <label for="classictype">經典不敗</label>
                 </div>
-                <div>
+                <div class="radio-item">
                     <input id="normaltype" type="radio" name="onseason" value="normaltype" checked>
                     <i class="fas fa-check-circle"></i>
                     <label for="normaltype">一般</label>
@@ -44,7 +44,7 @@
                 <legend>{{categoryAll[type]["title"]}} </legend>
                 {% for item in categoryDetail%}
                     {% if categoryDetail[item]["type"]==type%}
-                        <div>
+                        <div class="radio-item">
                             <input type="radio" id={{item}} name="detail" value={{item}}>
                             <i class="fas fa-check-circle"></i>
                             <label for={{item}}>{{categoryDetail[item]["info"]}}</label>
@@ -52,6 +52,11 @@
                     {% endif%}
                 {% endfor %}
             {% endfor %}
+            <div id="form-buttons">
+                <button type="submit">
+                    <h2>送出</h2>
+                </button>
+            </div>
         </div>
         <!-- <div class="categoryDetail">
                 <legend>畢業花束</legend>
@@ -158,11 +163,7 @@
                 <legend>盆花花禮</legend>
             </div> -->
 
-        <div id="form-buttons">
-            <button type="submit">
-                <h2>送出</h2>
-            </button>
-        </div>
+        
     </form>
 </section>
 

@@ -19,6 +19,9 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
 }
+hr{
+    margin: 10px;
+}
 
 /* header */
 nav{
@@ -42,10 +45,10 @@ nav{
 .bar-links{
     cursor: pointer;
     flex:none;
-    /* margin:10px; */
+    margin:10px;
 }
 .bar-img{
-    height: 24px;
+    height: 30px;
     margin: 5px;
 } 
 .bar-logo{

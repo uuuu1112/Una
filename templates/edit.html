@@ -1,123 +1,73 @@
 {% extends "backstage.html" %}
-
+{% block css %}
+<link rel="stylesheet" href="/static/css/add.css">
+{% endblock%}
 {% block main %}
-    <a class="back-btn" href="{{ url_for('productlist') }}">
-        Back to product list
-    </a>
-    <section id="form">
-        <form action="{{ url_for('edit',id=product.id) }}" method="POST">
+<a class="back-btn" href="{{ url_for('productlist') }}">
+    <h2>回到商品編輯列表</h2>
+</a>
+<section id="form">
+    <form action="{{ url_for('edit',id=product.id) }}" method="POST">
+        <div>
             <div class="form-container">
-                <label for="url">URL</label>
+                <label for="url">Photo</label>
                 <input id="url" name="url" type="text" placeholder="圖片來源" value="{{product.url}}">
             </div>
-            
+
             <div class="form-container">
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" placeholder="名稱" value="{{product.name}}">
             </div>
 
-            <div>
+            <div class="left">
                 <legend>最新創作/經典不敗</legend>
                 <div>
-                    <input id="newtype" type="radio" name="onseason" value="newtype" {% if product.onseason=='newtype' %} checked {% endif %}>
+                    <input id="newtype" type="radio" name="onseason" value="newtype" {% if product.onseason=='newtype'
+                        %} checked {% endif %}>
                     <i class="fas fa-check-circle"></i>
                     <label for="newtype">最新創作</label>
                 </div>
                 <div>
-                    <input id="classictype" type="radio" name="onseason" value="classictype" {% if product.onseason=='classictype' %} checked {% endif %}>
+                    <input id="classictype" type="radio" name="onseason" value="classictype" {% if
+                        product.onseason=='classictype' %} checked {% endif %}>
                     <i class="fas fa-check-circle"></i>
                     <label for="classictype">經典不敗</label>
                 </div>
                 <div>
-                    <input id="normaltype" type="radio" name="onseason" value="normaltype" {% if product.onseason=='normaltype' %} checked {% endif %}>
+                    <input id="normaltype" type="radio" name="onseason" value="normaltype" {% if
+                        product.onseason=='normaltype' %} checked {% endif %}>
                     <i class="fas fa-check-circle"></i>
                     <label for="normaltype">一般</label>
                 </div>
             </div>
+        </div>
 
-            <div>
-                <legend>Detail</legend>
-                <legend>畢業花束</legend>
-                <legend>母親節花束</legend>
-                <legend>求婚花束</legend>
-                <div>
-                    <input id="marriage1" type="radio" name="detail" value="marriage1" {% if product.detail=='marriage1' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="marriage1">$700/ 7朵玫瑰/花面寬約30cm(含包裝)、總長約40cm</label>
-                </div>
-                <div>
-                    <input id="marriage2" type="radio" name="detail" value="marriage2" {% if product.detail=='marriage2' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="marriage2">$890/ 9朵玫瑰/花面寬約35cm(含包裝)、總長約50cm</label>
-                </div>
-                <div>
-                    <input id="marriage3" type="radio" name="detail" value="marriage3" {% if product.detail=='marriage3' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="marriage3">$1200/ 12朵玫瑰/花面寬約45cm(含包裝)、總長約60cm</label>
-                </div>
 
-                <legend>乾燥花束</legend>
-                <div>
-                    <input id="dryflower1" type="radio" name="detail" value="dryflower1" {% if product.detail=='dryflower1' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="dryflower1">$250/ 花面寬約10cm(含包裝)、總長約25cm</label>
-                </div>
-                <div>
-                    <input id="dryflower2" type="radio" name="detail" value="dryflower2" {% if product.detail=='dryflower2' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="dryflower2">$299/ 花面寬約15cm(含包裝)、總長約30cm</label>
-                </div>
-                <div>
-                    <input id="dryflower3" type="radio" name="detail" value="dryflower3" {% if product.detail=='dryflower3' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="dryflower3">$500/ 花面寬約23cm(含包裝)、總長約35cm</label>
-                </div>
-
-                <legend>玻璃罩盅罩</legend>
-                <div>
-                    <input id="glass1" type="radio" name="detail" value="glass1" {% if product.detail=='glass1' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="glass1">$1200/ 盅罩有燈款/外徑14cm、內徑10.5cm、總高約16.5cm</label>
-                </div>
-                <div>
-                    <input id="glass2" type="radio" name="detail" value="glass2" {% if product.detail=='glass2' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="glass2">$690/ 盅罩無燈款/外徑10.4cm、內徑7cm、總高約15cmm</label>
-                </div>
-                <div>
-                    <input id="glass3" type="radio" name="detail" value="glass3" {% if product.detail=='glass3' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="glass3">$800/ 圓罩無燈款/外徑11.3cm、內徑8cm、總高約10cm</label>
-                </div>
-                <div>
-                    <input id="glass4" type="radio" name="detail" value="glass4" {% if product.detail=='glass4' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="glass4">$860/ 圓罩有燈款/外徑11.3cm、內徑8cm、總高約12cm</label>
-                </div>
-
-                <legend>裝飾小物</legend>
-                <div>
-                    <input id="decoration1" type="radio" name="detail" value="decoration1" {% if product.detail=='decoration1' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="decoration1">$720/ 方形框/19.5X19.3cm</label>
-                </div>
-                <div>
-                    <input id="decoration2" type="radio" name="detail" value="decoration2" {% if product.detail=='decoration2' %} checked {% endif %}>
-                    <i class="fas fa-check-circle"></i>
-                    <label for="decoration2">$560/ 矩形框/19.5X14.4cm</label>
-                </div>
-                <legend>婚禮系列</legend>
-                <legend>盆花花禮</legend>
-            </div>
+        <div class="categoryDetail">
+            {% for type in categoryPureType %}
+                <legend>{{categoryAll[type]["title"]}} </legend>
+                {% for item in categoryDetail%}
+                    {% if categoryDetail[item]["type"]==type %}
+                        <div class="radio-item">
+                            <input type="radio" id={{item}} name="detail" value={{item}} {% if product.detail==item %} checked {% endif %}>
+                            <i class="fas fa-check-circle"></i>
+                            <label for={{item}}>{{categoryDetail[item]["info"]}}</label>
+                        </div>
+                    {% endif%}
+                {% endfor %}
+            {% endfor %}
 
             <div id="form-buttons">
                 <button>
                     <a href="{{ url_for('delete',id=product.id) }}">刪除這個商品</a>
-                </button> 
+                </button>
                 <button type="submit">編輯完成</button>
             </div>
-        </form>
-    </section>
+        </div>
+
+
+    </form>
+</section>
 
 {% endblock %}
 

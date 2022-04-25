@@ -2,29 +2,34 @@
 
 {% block main %}
 <a href="{{ url_for('add') }}">
-    <h2>add item</h2>
+    <h2>增加商品</h2>
 </a>
 
-<div class="products">
-    <section class="section-products">
+
+<section class="section-products">
+    <div class="section-title">
+        商品列表
+    </div>
+    <div class="products">
         {% for item in product %}
-        <div class="product">
-            <a href="{{url_for('edit',id=item.id)}} ">
-                <div class="product-img">
-                    <img src="{{categoryDetail[item.detail]['path']}}{{item.url}}.jpg" alt="{{product.alt}}">
-                </div>
-                <div class="product-title">
-                    <p>{{item.name}}</p>
-                    <p>{{item.type}}</p>
-                    <h3>{{item.onseason}}</h3>
-                    <h3>{{item.price}}</h3>
-                </div>
-            </a>
-        </div>
-    {% endfor %}
-    </section>
+            <div class="product">
+                <a href="{{url_for('edit',id=item.id)}} ">
+                    <div class="product-img">
+                        <img src="{{categoryDetail[item.detail]['path']}}{{item.url}}.jpg" alt="{{product.alt}}">
+                    </div>
+                    <div class="product-title">
+                        <p>{{item.name}}</p>
+                        <p>{{categoryDetail[item.detail]["select"] }}</p>
+                        <p>{{categoryOnSeason[item.onseason]}}</p>
+                        <p>{{item.price}}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
     
-</div>
+</section>
+
 
 
 {% endblock %}
