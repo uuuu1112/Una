@@ -111,9 +111,10 @@
             </div>
 
             <div id="form-buttons">
-                <a href="{{ url_for('delete',id=product.id) }}">delete</a>
-                <button type="reset">Cancel</button>
-                <button type="submit">Submit</button>
+                <button>
+                    <a href="{{ url_for('delete',id=product.id) }}">刪除這個商品</a>
+                </button> 
+                <button type="submit">編輯完成</button>
             </div>
         </form>
     </section>

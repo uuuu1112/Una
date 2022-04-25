@@ -6,34 +6,16 @@
 {% block main %}
 
 <section class="section-news">
-    <h1 class="section-title">Three new beauty objects</h1>
-    <div class="section-p">This season, the men’s shoe collection is a breath of fresh air. Iconic details, innovative know-how and supple materials create an airy look and an elegant style to adopt all summer long.</div>
+    <h1 class="section-title">{{homePage.news["title"]}}</h1>
+    <div class="section-p">{{homePage.news["paragraph"]}}</div>
     <div class="news-img">
         <img src="https://assets.hermes.com/is/image/hermesedito/P_169_BEAUTY_ROUGE_SS22_PUSHEDITO?fit=wrap%2C0&wid=730" alt="花店消息">
     </div>
 </section>
 
-<section class="section-products">
-    <h1 class="section-title">Our cave of wonders</h1>
-    <div class="products">
-        {% for item in categoryinIndex %}
-            <div class="product">
-                <a href="{{categoryAll[item]['url']}}">
-                    <div class="product-img">
-                        <img src="{{categoryAll[item]['src']}}.jpg" alt="">
-                    </div>
-                    <div class="product-title">
-                        <p>{{categoryAll[item]["title"]}}</p>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
-    </div>
-</section>
-
 <section class="section-theme">
-    <h1 class="section-title">Every shade of red</h1>
-    <div class="section-p">Rouge Hermès Spring-Summer 2022 limited-edition collection, Three new shades with a gloss finish.</div>
+    <h1 class="section-title">{{homePage.onseason["title"]}}</h1>
+    <div class="section-p">{{homePage.onseason["paragraph"]}}</div>
     <div class="theme">
         <div class="theme-left">
             <img src="https://assets.hermes.com/is/image/hermesedito/P_11_BEAUTY_ROUGE_SS22_PUSHMERCH?fit=wrap%2C0&wid=696" alt="">
@@ -83,6 +65,26 @@
         </div>
     </div>
 </section>
+
+<section class="section-products">
+    <h1 class="section-title">我們的作品集</h1>
+    <div class="products">
+        {% for item in categoryinIndex %}
+            <div class="product">
+                <a href="{{categoryAll[item]['url']}}">
+                    <div class="product-img">
+                        <img src="{{categoryAll[item]['src']}}.jpg" alt="">
+                    </div>
+                    <div class="product-title">
+                        <p>{{categoryAll[item]["title"]}}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
 
 
 {% endblock%}

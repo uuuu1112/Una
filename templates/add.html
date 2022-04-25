@@ -1,22 +1,25 @@
 {% extends "backstage.html" %}
-
+{% block css %}
+<link rel="stylesheet" href="/static/css/add.css">
+{% endblock%}
 {% block main %}
-    <a class="back-btn" href="{{ url_for('productlist') }}">
-        Back to product list
-    </a>
-    <section id="form">
-        <form action="{{ url_for('add') }}" method="POST">
+<a class="back-btn" href="{{ url_for('productlist') }}">
+    <h2>回到商品編輯列表</h2>
+</a>
+<section id="form">
+    <form action="{{ url_for('add') }}" method="POST">
+        <div>
             <div class="form-container">
-                <label for="url">URL</label>
+                <label for="url">Photo :</label>
                 <input id="url" name="url" type="text" placeholder="圖片來源">
             </div>
-            
+
             <div class="form-container">
-                <label for="name">Name</label>
+                <label for="name">Name :</label>
                 <input id="name" name="name" type="text" placeholder="名稱">
             </div>
 
-            <div>
+            <div class="left">
                 <legend>最新創作/經典不敗</legend>
                 <div>
                     <input id="newtype" type="radio" name="onseason" value="newtype">
@@ -34,11 +37,56 @@
                     <label for="normaltype">一般</label>
                 </div>
             </div>
+        </div>
 
-            <div>
-                <legend>Detail</legend>
+        <div class="categoryDetail">
+            {% for type in categoryPureType %}
+                <legend>{{categoryAll[type]["title"]}} </legend>
+                {% for item in categoryDetail%}
+                    {% if categoryDetail[item]["type"]==type%}
+                        <div>
+                            <input type="radio" id={{item}} name="detail" value={{item}}>
+                            <i class="fas fa-check-circle"></i>
+                            <label for={{item}}>{{categoryDetail[item]["info"]}}</label>
+                        </div>
+                    {% endif%}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <!-- <div class="categoryDetail">
                 <legend>畢業花束</legend>
                 <legend>母親節花束</legend>
+                <div>
+                    <input id="mother1" type="radio" name="detail" value="mother1">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="mother1">$1450/康乃馨乾燥花束/花面寬約30cm(含包裝)、總長約50cm</label>
+                </div>
+                <div>
+                    <input id="mother2" type="radio" name="detail" value="mother2">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="mother2">$550/ 香皂康乃馨花束/花面寬約24cm(含包裝)、總長約36cm</label>
+                </div>
+                <div>
+                    <input id="mother3" type="radio" name="detail" value="mother3">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="mother3">$250/ 單束康乃馨花束/花面寬約13cm(含包裝)、總長約37cm(色系：粉/紅)</label>
+                </div>
+                <div>
+                    <input id="mother4" type="radio" name="detail" value="mother4">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="mother4">$150/ 單枝康乃馨花束/花面寬約13cm(含包裝)、總長約37cm(色系：紅/粉/紫)</label>
+                </div>
+                <div>
+                    <input id="mother4" type="radio" name="detail" value="mother4">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="mother4">$150/ 單枝康乃馨花束/花面寬約13cm(含包裝)、總長約37cm(色系：紅/粉/紫)</label>
+                </div>
+                <div>
+                    <input id="mother5" type="radio" name="detail" value="mother5">
+                    <i class="fas fa-check-circle"></i>
+                    <label for="mother5">$1450/ 永生花康乃馨玻璃盅罩(圈燈電池款)/外徑14cm、內徑10.5cm、總高約16.5cm(色系：紅/粉/粉橘)</label>
+                </div>
+
                 <legend>求婚花束</legend>
                 <div>
                     <input id="marriage1" type="radio" name="detail" value="marriage1">
@@ -108,14 +156,15 @@
                 </div>
                 <legend>婚禮系列</legend>
                 <legend>盆花花禮</legend>
-            </div>
+            </div> -->
 
-            <div id="form-buttons">
-                <button type="reset">Cancel</button>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </section>
+        <div id="form-buttons">
+            <button type="submit">
+                <h2>送出</h2>
+            </button>
+        </div>
+    </form>
+</section>
 
 {% endblock %}
 

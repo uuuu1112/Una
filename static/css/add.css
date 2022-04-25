@@ -1,0 +1,21 @@
+#form{
+    display: flex;
+    text-align: start;
+    justify-content: center;
+}
+form{
+    display: flex;
+}
+.left{
+    padding: 20px;
+}
+.categoryDetail{
+    padding: 20px;
+}
+.form-container{
+    padding: 10px;
+}
+legend{
+    font-weight: bold;
+    background-color: #fff;
+}

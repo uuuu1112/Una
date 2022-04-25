@@ -12,8 +12,9 @@ def home():
         sideBarDetail=info.SideBar.detail,
         categoryAll=info.Category.all,
         categoryinIndex=info.Category.inIndex,
+        homePage=info.HomePage,
         )
-
+# 聯絡我們
 @app.route("/contact") 
 def contact():
     return render_template(
@@ -38,7 +39,6 @@ def category():
         "category.html",
         products=products,
         sideBarDetail=info.SideBar.detail,
-        sideBarOnly=info.SideBar.only,
         categoryinIndex=info.Category.inIndex,
         categoryAll=info.Category.all,
         categoryDetail=info.Category.detail,
@@ -82,7 +82,12 @@ def add():
         db.session.add(new_product)
         db.session.commit()
         return redirect(url_for('productlist'))
-    return render_template("add.html")
+    return render_template(
+        "add.html",
+        categoryAll=info.Category.all,
+        categoryDetail=info.Category.detail,
+        categoryPureType=info.Category.pureType,
+        )
 
 # 編輯商品頁面
 @app.route("/edit/<id>",methods=['GET','POST'])
@@ -118,7 +123,10 @@ def test():
 @app.route("/test2")
 def test2():
     return render_template(
-        "test2.html"
+        "test2.html",
+        categoryAll=info.Category.all,
+        categoryDetail=info.Category.detail,
+        categoryPureType=info.Category.pureType,
     )
 
 
