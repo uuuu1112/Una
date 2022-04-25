@@ -78,5 +78,3 @@ class Precaution:
             "caution":"請詳讀，卡片無法來回更改"
         }
     }
-
-
