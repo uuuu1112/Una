@@ -47,6 +47,13 @@ nav{
     flex:none;
     margin:10px;
 }
+.bar-links a{
+    text-decoration: none;
+    display: flex;
+}
+.bar-links a span{
+   margin: auto;
+}
 .bar-img{
     height: 30px;
     margin: 5px;

@@ -9,7 +9,7 @@
     <h1 class="section-title">{{homePage.news["title"]}}</h1>
     <div class="section-p">{{homePage.news["paragraph"]}}</div>
     <div class="news-img">
-        <img src="https://assets.hermes.com/is/image/hermesedito/P_169_BEAUTY_ROUGE_SS22_PUSHEDITO?fit=wrap%2C0&wid=730" alt="花店消息">
+        <img src="{{homePage.news['src']}}.jpg" alt="{{homePage.news['alt']}}">
     </div>
 </section>
 
@@ -18,50 +18,23 @@
     <div class="section-p">{{homePage.onseason["paragraph"]}}</div>
     <div class="theme">
         <div class="theme-left">
-            <img src="https://assets.hermes.com/is/image/hermesedito/P_11_BEAUTY_ROUGE_SS22_PUSHMERCH?fit=wrap%2C0&wid=696" alt="">
+            <a href="/category?type=mother">
+                <img src="{{homePage.onseason['src']}}.jpg" alt="{{homePage.onseason['alt']}}">
+            </a>
         </div>
         <div class="theme-right">
+            {% for item in onseason%}
             <div class="t-product">
-                <div class="product-block">
+                <a href="{{url_for('product',id=item.id)}} ">
                     <div class="product-img">
-                        <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
+                        <img src="{{categoryDetail[item.detail]['path']}}{{item.url}}.jpg" alt="">
                     </div>
                     <div class="product-title">
-                        <p>Women silk</p>
+                        <p>{{item.name}}</p>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="t-product">
-                <div class="product-block">
-                    <div class="product-img">
-                        <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
-                    </div>
-                    <div class="product-title">
-                        <p>Women silk</p>
-                    </div>
-                </div>
-            </div>
-            <div class="t-product">
-                <div class="product-block">
-                    <div class="product-img">
-                        <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
-                    </div>
-                    <div class="product-title">
-                        <p>Women silk</p>
-                    </div>
-                </div>
-            </div>
-            <div class="t-product">
-                <div class="product-block">
-                    <div class="product-img">
-                        <img src="https://assets.hermes.com/is/image/hermesedito/P_11_CH2_WSILK_003799S03_?fit=wrap%2C0&wid=360" alt="">
-                    </div>
-                    <div class="product-title">
-                        <p>Women silk</p>
-                    </div>
-                </div>
-            </div>
-      
+            {% endfor %}
         </div>
     </div>
 </section>

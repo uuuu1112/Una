@@ -7,12 +7,15 @@ from sqlalchemy import or_
 # 主頁
 @app.route("/") 
 def home():
+    onseason=Product.query.filter_by(type="mother").limit(4).all()
     return render_template(
         "index.html",
         sideBarDetail=info.SideBar.detail,
         categoryAll=info.Category.all,
         categoryinIndex=info.Category.inIndex,
+        categoryDetail=info.Category.detail,
         homePage=info.HomePage,
+        onseason=onseason,
         )
 # 聯絡我們
 @app.route("/contact") 
@@ -30,19 +33,17 @@ def category():
     type=request.args.get("type","")
     onseason=request.args.get("onseason","")
     if type != "":
-        print("1",type)
         products=Product.query.filter_by(type=type).order_by(Product.price).all()
     if onseason !="":
-        print("2",type)
         products=Product.query.filter_by(onseason=onseason).all()
     if type=="" and onseason=="":
-        print("3",type)
         products=Product.query.order_by(Product.type).all()
     # else:
     #     print("3",type)
     #     products=Product.query.order_by(Product.type).all()
     return render_template(
         "category.html",
+        type=type,
         products=products,
         sideBarDetail=info.SideBar.detail,
         categoryinIndex=info.Category.inIndex,

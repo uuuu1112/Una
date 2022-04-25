@@ -23,6 +23,22 @@
 
 .category-options ul,.onseason-options ul{
     display: flex;
+    justify-content: center;
     background-color: #fffcf7;
     margin: 5px;
+}
+
+.category-options ul li{
+    list-style: none;
+    margin: 10px;
+    
+}
+.category-options ul li a{
+    text-decoration: none;
+}
+
+@media screen and (max-width:1250px) {
+    .category-options{
+        display: none;
+    }
 }

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una's Floral Designs</title>
-    <link rel="shortcut icon" type=""image href="/static/img/layout/Una.png">
+    <link rel="shortcut icon" type="" image href="/static/img/layout/Una.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
     {% block css %}{% endblock %}
 </head>
+
 <body>
-    
-    
+
+
     <nav>
         <div class="sidebar">
             <div class="sidebar-block">
@@ -22,18 +24,19 @@
                 </div>
                 <ul class="nav-links">
                     {% for item in sideBarDetail %}
-                        <li>
-                            <a href="{{categoryAll[item]['url']}}">
-                                {{categoryAll[item]['title']}}
-                            </a>
-                        </li>
+                    <li>
+                        <a href="{{categoryAll[item]['url']}}">
+                            {{categoryAll[item]['title']}}
+                        </a>
+                    </li>
                     {% endfor %}
                 </ul>
-            </div>   
+            </div>
         </div>
         <div class="mask"></div>
         <div class="navbar">
             <div class="bar-links menu">
+                <a href="#"></a>
                 <img src="/static/img/layout/menu.png" alt="花店商品" class="bar-img">
                 <span class="bar-p">作品集</span>
             </div>
@@ -43,18 +46,21 @@
                 </a>
             </div>
             <div class="bar-links contact">
-                <img src="/static/img/layout/message.png" alt="聯絡花店" class="bar-img">
-                <span class="bar-p">聯絡我們</span>
+                <a href="{{ url_for('contact') }}">
+                    <img src="/static/img/layout/message.png" alt="聯絡花店" class="bar-img">
+                    <span class="bar-p">聯絡我們</span>
+                </a>
+                
             </div>
             <div class="bar-links info">
                 <img src="/static/img/layout/info.png" alt="關於花店" class="bar-img">
                 <span class="bar-p"> 關於我們</span>
             </div>
-        </div> 
+        </div>
     </nav>
-    
-    
-    
+
+
+
     <main>
         {% block main%}
         {% endblock %}
@@ -67,27 +73,28 @@
             <p>Phone : ( 07 ) 365-3668</p>
         </div>
         <div class="footer-bottom">
-                <div class="footer-cell">
-                    <a href="https://goo.gl/maps/jmgeYgfTGSA3nK9BA">
-                        <img src="/static/img/layout/map.png" alt="愛妤花店位置">
-                    </a>
-                </div>
-                <div class="footer-cell">
-                    <a href="https://www.facebook.com/godloveuna">
-                        <img src="/static/img/layout/facebook.png" alt="愛妤花店粉專">
-                    </a>
-                </div>
-                <div class="footer-cell">
-                    <a href="https://www.instagram.com/unaflower1/">
-                        <img src="/static/img/layout/instagram.png" alt="愛妤花店ig">
-                    </a>
-                </div>
-            
-            
+            <div class="footer-cell">
+                <a href="https://goo.gl/maps/jmgeYgfTGSA3nK9BA">
+                    <img src="/static/img/layout/map.png" alt="愛妤花店位置">
+                </a>
+            </div>
+            <div class="footer-cell">
+                <a href="https://www.facebook.com/godloveuna">
+                    <img src="/static/img/layout/facebook.png" alt="愛妤花店粉專">
+                </a>
+            </div>
+            <div class="footer-cell">
+                <a href="https://www.instagram.com/unaflower1/">
+                    <img src="/static/img/layout/instagram.png" alt="愛妤花店ig">
+                </a>
+            </div>
+
+
         </div>
     </footer>
-    
+
     {% block js %}{% endblock %}
     <script src="/static/js/app.js"></script>
 </body>
+
 </html>

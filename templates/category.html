@@ -8,10 +8,11 @@
 
 <div class="title-filter">
     <div class="filter-block">
-        <h1 class="section-title">Our cave of wonders</h1>
+        <!-- <h1 class="section-title">Our cave of wonders</h1> -->
+        <h2 class="section-title">{{categoryAll[type]["title"] }}</h2>
     </div>
 </div>
-<div class="section-filter">
+<!-- <div class="section-filter">
     <div class="filter-block">
         <div class="block-item">
             <h3>類別</h3>
@@ -24,7 +25,7 @@
             <img src="/static/img/layout/expand_less.png" alt="" class="expand-less">
         </div>
     </div>
-</div>
+</div> -->
 <div class="category-options" >
     <ul>
         {% for item in categoryinIndex %}
@@ -36,7 +37,7 @@
         {% endfor %}
     </ul>
 </div>
-<div class="onseason-options">
+<!-- <div class="onseason-options">
     <ul>
         {% for item in sideBarOnly %}
             <li>
@@ -46,7 +47,7 @@
             </li>
         {% endfor %}
     </ul>
-</div>
+</div> -->
     
 
  
@@ -60,7 +61,7 @@
                 </div>
                 <div class="product-title">
                     <p>{{item.name}}</p>
-                    <p>{{item.type}}</p>
+                    <p>{{item.price}}</p>
                 </div>
             </a>
         </div>
