@@ -2,7 +2,6 @@ from typing import NewType
 from flask import redirect, url_for, render_template, url_for, request
 from models import db, app, Product
 import info
-from sqlalchemy import or_
 
 # 主頁
 @app.route("/") 
