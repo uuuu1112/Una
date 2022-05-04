@@ -1,3 +1,6 @@
+const initFooter=()=>{
+    
+}
 const navSlide=()=>{
     const menu = document.querySelector('.menu')
     const sidebar=document.querySelector('.sidebar')
